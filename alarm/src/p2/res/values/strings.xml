@@ -1,0 +1,6 @@
+<resources>
+    <item name="visible" type="id"/>
+    <item name="masked" type="id"/>
+    <string name="app_name">工厂智投闹钟</string>
+    <string name="calibration">校准</string>
+</resources>

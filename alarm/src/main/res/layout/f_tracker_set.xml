@@ -212,6 +212,18 @@
                 <View
                     style="@style/vertical_line"
                     />
+
+                <RelativeLayout
+                    style="@style/style_rl">
+
+                    <TextView
+                        android:id="@+id/tv_calibration"
+                        style="@style/style_set_tv"
+                        android:layout_centerInParent="true"
+                        android:text="@string/calibration"
+                        android:textColor="@color/blue_3"
+                        />
+                </RelativeLayout>
             </LinearLayout>
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>

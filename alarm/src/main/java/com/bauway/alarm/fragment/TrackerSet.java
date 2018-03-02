@@ -71,6 +71,8 @@ public class TrackerSet extends BaseFragment {
     TextView       mTvBindStatus;
     @BindView(R.id.bt_bind_device)
     TextView       mBtBindDevice;
+    @BindView(R.id.tv_calibration)
+    TextView tv_calibration;
 
     private String[] num, hourMinutes;
 
@@ -316,7 +318,7 @@ public class TrackerSet extends BaseFragment {
     }
 
     @OnClick({R.id.bt_switch_vibration, R.id.bt_switch,
-            R.id.bt_bind_device, R.id.switch_alarm})
+            R.id.bt_bind_device, R.id.tv_calibration, R.id.switch_alarm})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.bt_switch_vibration:
@@ -344,6 +346,10 @@ public class TrackerSet extends BaseFragment {
                                 }
                             });
                 }
+                break;
+            case R.id.tv_calibration:
+                mSmaManager.write(SmaManager.SET.CALIBRATION);
+                if (!mSmaManager.isConnected) return;
                 break;
         }
     }
