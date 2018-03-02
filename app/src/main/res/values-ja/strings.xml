@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="already_bind">デバイスと関連しました</string>
+    <string name="all_sum_num">今まで合計</string>
+    <string name="already_send_reset_email">認証コードはもうメールに送りました、メールの指示で操作してください。</string>
+    <string name="app_user_info">アカウント情報</string>
+    <string name="cancel">キャッセル</string>
+    <string name="change_pwd">パスワードを変更</string>
+    <string name="change_pwd_now">パスワード変更中</string>
+    <string name="change_pwd_success">パスワード変更しました</string>
+    <string name="charge_maintenance">充電とメンテナンス</string>
+    <string name="clean">クリーニング</string>
+    <string name="common_set">現行索引</string>
+    <string name="concern_us">私達と繋ぐ</string>
+    <string name="confirm">確認</string>
+    <string name="confirm_log_out_app">本当にログアウトしますか？</string>
+    <string name="confirm_unbind_device">デバイスと関連しますか？</string>
+    <string name="count_number">パフ回数</string>
+    <string name="dcv">電圧</string>
+    <string name="device_not_connected">まずはデバイスと関連してください</string>
+    <string name="email">Eメール</string>
+    <string name="email_address_err">認証コードは間違っています</string>
+    <string name="email_already_register">メールアドレスは既に関連されています</string>
+    <string name="email_need_check">メールアドレスは認証していません、認証を確認してから登録してください</string>
+    <string name="email_pwd_input_err">メールアドレスもしくはパスワードが間違っています</string>
+    <string name="evaluate">コメント</string>
+    <string name="every_day">毎日</string>
+    <string name="every_day_use_num_plan">毎日パフ回数計画</string>
+    <string name="every_month">毎月</string>
+    <string name="every_week">毎週</string>
+    <string name="forget_pwd">パスワードを忘れた？</string>
+    <string name="have_charge">もう充電しました？</string>
+    <string name="have_clean">もうクリーニングしました？</string>
+    <string name="hk">ホンコンドル</string>
+    <string name="just_now">先程</string>
+    <string name="loading">読み込み中</string>
+    <string name="log_out">サインアウト</string>
+    <string name="login">ログイン</string>
+    <string name="login_now">登録中</string>
+    <string name="loop_time">単回起動時間</string>
+    <string name="loop_use_num_plan">単回パフ回数計画</string>
+    <string name="low_power_waining">低圧警告</string>
+    <string name="min_before">%d分前に</string>
+    <string name="money_type">貨幣</string>
+    <string name="need_charge">充電が必要</string>
+    <string name="no_set">未設定</string>
+    <string name="notes">附注</string>
+    <string name="notes_info">
+        \n
+        1: パスワードが忘れても再設定できるように、アカウントを新規作成する時は個人のメールアドレスが必要です
+        \n\n
+        2: 正確の製品を選んでください
+        \n\n
+        3: 単回パフ回数計画で商品を一回に使うのパフ回数を設定することができます
+        \n\n
+        4: 温度設定はご自身のお好みによって決めてください
+        \n\n
+        5: 振動が要らない場合は「設定」に閉じることができます
+        \n\n
+        6: リマインドは低電圧リマインド、パフ回数警告、クリーニングと充電警告があります
+        \n\n
+        7.充電警告は30日間充電しない場合あたなにリマインドします
+        </string>
+    <string name="notification">リマインド</string>
+    <string name="off">オフ</string>
+    <string name="on">オン</string>
+    <string name="parameter_not_null">パラメーターは必ず入力してください</string>
+    <string name="please_enable_the_bluetooth">ブルートゥースを開けてください</string>
+    <string name="plz_input_email">メールアドレスを入力してください</string>
+    <string name="plz_input_feedback">コメントを入力してください</string>
+    <string name="plz_input_new_pwd">新しいパスワードを入力してください</string>
+    <string name="plz_input_new_pwd_again">もう一度新しいパスワードを入力してください</string>
+    <string name="plz_input_old_pwd">前のパスワードを入力してください</string>
+    <string name="plz_input_pwd">パスワードを入力してください</string>
+    <string name="plz_input_pwd_again">もう一度パスワードを入力してください</string>
+    <string name="plz_input_user_feedback">コメントを入力してください</string>
+    <string name="plz_set_price">価格を設定してください</string>
+    <string name="power_count">充電回数</string>
+    <string name="power_time">充電時間</string>
+    <string name="product_select">製品</string>
+    <string name="pwd_input_diff">パスワードは一致していません</string>
+    <string name="register">新規作成</string>
+    <string name="register_failure">新規作成失敗</string>
+    <string name="register_now">新規作成中</string>
+    <string name="register_success_plz_check_email">新規作成成功、認証メールを確認してください</string>
+    <string name="reset_password">パスワードリセット</string>
+    <string name="rmb">人民元</string>
+    <string name="save">節約</string>
+    <string name="search">検索</string>
+    <string name="search_again">リトライ</string>
+    <string name="searching">検索中</string>
+    <string name="sec_before">%d秒前に</string>
+    <string name="selected_device">デバイスを選んでください</string>
+    <string name="send">送信</string>
+    <string name="send_feedback_msg_failure">コメント送信失敗、一度やってみてください</string>
+    <string name="send_feedback_msg_success">ごコメントありがとうございます、ご意見と提案は慎重に検討します</string>
+    <string name="send_reset_pwd_info">リセット要請中</string>
+    <string name="set">設定</string>
+    <string name="shake">振動</string>
+    <string name="smoke_price">タバコ1箱の値段</string>
+    <string name="surplus_num">残ったパフ回数</string>
+    <string name="temp">温度</string>
+    <string name="temp_set">温度設定</string>
+    <string name="today">今日%tR</string>
+    <string name="unbind_device">デバイスとの関連を解除</string>
+    <string name="usd">ドル</string>
+    <string name="use_num_plan_warning">パフ回数計画リマインド</string>
+    <string name="use_product_name">使ってる製品の名前</string>
+    <string name="user_use_number">パフ</string>
+    <string name="vape_world">ベイパワールド</string>
+    <string name="vapor_meet">ベイパーミート</string>
+    <string name="vibration">振動</string>
+    <string name="work_time_set">単回起動時間</string>
+    <string name="yesterday">昨日%tR</string>
+    <string name="between">の間</string>
+    <string name="use_num_plan_suggest">，推奨値</string>
+    <string name="ota">ハードウェアアップデート</string>
+</resources>

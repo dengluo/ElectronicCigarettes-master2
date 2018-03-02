@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/ll_bg"
+    >
+
+    <include layout="@layout/include_return"
+        />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include layout="@layout/include_login_logo"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/Default_font_size_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email"
+                android:textColor="@color/white_1"
+                />
+
+            <TextView
+                android:id="@+id/tv_user_email"
+                style="@style/Default_font_size_18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="xxxxxx@xxx.com"
+                android:textColor="@color/white_1"
+                />
+
+            <View
+                android:id="@+id/view"
+                style="@style/vertical_line"
+                />
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/Default_font_size_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="@string/use_product_name"
+                android:textColor="@color/white_1"
+                />
+
+            <TextView
+                android:id="@+id/tv_product_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:gravity="center_vertical"
+                android:text="XXXXXXX"
+                android:textColor="@color/white_1"
+                />
+
+            <View
+                android:id="@+id/view2"
+                style="@style/vertical_line"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bt_change_pwd"
+        style="@style/bt_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="115dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/change_pwd"
+        android:textColor="@color/white_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout5"
+        app:layout_constraintVertical_bias="0.308"/>
+</android.support.constraint.ConstraintLayout>

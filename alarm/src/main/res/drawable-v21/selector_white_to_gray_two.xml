@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/white_2"
+    >
+    <item android:drawable="@drawable/shape_gray_rectangle" android:state_pressed="true"/>
+    <item android:drawable="@drawable/shape_white_rectangle_two"/>
+</ripple>

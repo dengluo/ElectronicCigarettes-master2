@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_1"
+    >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/include_return"/>
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/tv_company_name"
+                style="@style/Default_font_size_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/company_name"
+                android:textColor="@color/white_1"/>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="40dp"
+                android:paddingStart="40dp"
+                app:layout_constraintLeft_toLeftOf="@+id/tv_company_name"
+                app:layout_constraintRight_toRightOf="@+id/tv_company_name"
+                app:layout_constraintTop_toBottomOf="@+id/tv_company_name">
+
+                <include layout="@layout/include_logo_bottom"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34dp"
+                android:orientation="vertical"
+                android:padding="10dp"
+                >
+
+                <Button
+                    android:id="@+id/bt_youtube"
+                    style="@style/concern_us_bt_style"
+                    android:text="Youtube"
+                    />
+
+                <Button
+                    android:id="@+id/bt_instagram"
+                    style="@style/concern_us_bt_style"
+                    android:text="Instagram"
+                    />
+
+                <Button
+                    android:id="@+id/bt_facebook"
+                    style="@style/concern_us_bt_style"
+                    android:text="Facebook"
+                    />
+
+                <Button
+                    android:id="@+id/bt_twitter"
+                    style="@style/concern_us_bt_style"
+                    android:text="Twitter"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

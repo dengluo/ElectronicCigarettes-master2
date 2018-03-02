@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageButton
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bt_return_1"
+    style="@style/bt_return_1"
+    app:srcCompat="@drawable/vector_drawable_return"
+    tools:showIn="@layout/forget_password_activity"
+    />

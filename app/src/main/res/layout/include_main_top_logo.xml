@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="429dp"
+    android:layout_height="60dp"
+    android:background="@color/blue_1"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:layout_constraintTop_creator="1"
+    tools:showIn="@layout/product_select_activity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo_2"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=" &amp; "
+            android:textColor="@color/white_1"
+            android:textSize="26sp"
+            />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo_1"/>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,104 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '26.0.2'
+    flavorDimensions "versionCode"
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 19
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    signingConfigs {
+
+        release {
+            storeFile file('ElectronicCigarettes.jks')
+            storePassword 'bauway'
+            keyAlias 'bauway'
+            keyPassword 'bauway'
+        }
+    }
+    //lint检查,有任何的错误或者警告提示,都会终止构建,可以将其关掉。
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+        checkReleaseBuilds false
+    }
+    buildTypes {
+
+        debug {
+            versionNameSuffix "-debug"
+            //是否打开debuggable开关
+            debuggable true
+            //是否打开jniDebuggable开关
+            jniDebuggable false
+            //签名配置
+            signingConfig signingConfigs.release
+        }
+
+        release {
+            debuggable false
+            zipAlignEnabled true
+            //请使用第三方加固，例如360加固、乐固，无需本地混淆
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+
+    }
+    android {
+        productFlavors {
+            p1 {
+                applicationId "bauway.com.electroniccigarettes"
+                versionCode 11
+                versionName "1.1"
+                buildConfigField "int", "PROJECT_NO", "1"
+            }
+            p2 {
+                applicationId "bauway.com.electroniccigarettes2"
+                versionCode 17
+                versionName "1.7"
+                buildConfigField "int", "PROJECT_NO", "2"
+            }
+            p3 {
+                applicationId "bauway.com.electroniccigarettes3"
+                versionCode 11
+                versionName "1.1"
+                buildConfigField "int", "PROJECT_NO", "3"
+            }
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+    productFlavors {
+        p2 {
+            minSdkVersion 19
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:25.+'
+    compile 'com.android.support:support-v4:25.+'
+    compile 'com.android.support:design:25.+'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile project(':smablelib')
+    compile 'com.tencent.bugly:crashreport:latest.release'
+    //bmob-sdk：Bmob的android sdk包，包含了Bmob的数据存储、文件等服务，以下是最新的bmob-sdk:
+    compile 'cn.bmob.android:bmob-sdk:3.5.5'
+    //如果你想应用能够兼容Android6.0，请添加此依赖(org.apache.http.legacy.jar)
+    compile 'cn.bmob.android:http-legacy:1.0'
+    //butterknife
+    compile 'com.jakewharton:butterknife:8.5.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    //rxPermissions2
+    compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.3@aar'
+    //rxPreferences
+    compile 'com.f2prateek.rx.preferences2:rx-preferences:2.0.0-RC1'
+    //util
+    compile 'com.blankj:utilcode:1.8.4'
+}

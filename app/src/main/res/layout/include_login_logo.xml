@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/login_ll_one"
+    tools:showIn="@layout/login_activity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/logo_8"
+        />
+
+    <View
+        style="@style/vertical_line"/>
+
+    <include layout="@layout/include_logo_bottom"/>
+
+
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="bauway.com.electroniccigarettes">
+    <!--允许联网 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!--获取GSM（2g）、WCDMA（联通3g）等网络状态的信息  -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!--获取wifi网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!--保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <!--获取sd卡写的权限，用于文件上传和下载-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!--允许读取手机状态 用于创建BmobInstallation-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.LauncherActivity"
+            android:theme="@style/launch_app_theme"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:launchMode="singleTask"
+            />
+        <activity android:name=".activity.RegisterActivity"/>
+        <activity android:name=".activity.ForgetPasswordActivity"/>
+        <activity android:name=".activity.LoginActivity"/>
+        <activity android:name=".activity.BindDeviceActivity"/>
+        <activity android:name=".activity.ProductSelectActivity"/>
+        <activity android:name=".activity.CommonSetActivity"/>
+        <activity android:name=".activity.ConcernUsActivity"/>
+        <activity android:name=".activity.EvaluationActivity"/>
+        <activity android:name=".activity.UserUseNumberActivity"/>
+        <activity android:name=".activity.SetActivity"/>
+        <activity android:name=".activity.NotificationActivity"/>
+        <activity android:name=".activity.NotesActivity"/>
+        <activity android:name=".activity.AppUserInfoActivity"/>
+        <activity android:name=".activity.ChangePasswordActivity"/>
+    </application>
+</manifest>

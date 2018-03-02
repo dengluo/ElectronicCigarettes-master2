@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ring_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_white_to_gray_two"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_sing_num"
+            style="@style/Default_font_size_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="铃声1"
+            android:textColor="@color/black_1"
+            />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/vector_drawable_select"
+            />
+
+    </RelativeLayout>
+    <View
+        style="@style/vertical_line"
+        android:background="@color/black_1"
+        app:layout_constraintTop_toBottomOf="@id/rl"
+        />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/default_bg_style">
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        style="@style/top_rl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/bt_return"
+            style="@style/top_rl_bt"/>
+
+        <TextView
+            style="@style/top_rl_tv"
+            android:text="@string/about_us"
+            />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line1"
+        style="@style/vertical_line"
+        app:layout_constraintTop_toBottomOf="@id/rl1"
+        />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line1"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            >
+
+            <Button
+                android:id="@+id/bt_youtube"
+                style="@style/about_us_bt_style"
+                android:text="Youtube"
+                />
+
+            <Button
+                android:id="@+id/bt_ins"
+                style="@style/about_us_bt_style"
+                android:text="Instagram"
+                />
+
+            <ImageButton
+                android:id="@+id/bt_facebook"
+                style="@style/about_us_bt_style"
+                android:src="@drawable/ic_facebook"
+                />
+
+            <ImageButton
+                android:id="@+id/bt_tw"
+                style="@style/about_us_bt_style"
+                android:src="@drawable/ic_twitter"
+                />
+
+            <TextView
+                style="@style/about_us_tv"
+                android:layout_marginTop="100dp"
+                android:text="@string/company_name"
+                android:textSize="20sp"/>
+
+            <TextView
+                style="@style/about_us_tv"
+                android:autoLink="web"
+                android:text="@string/company_web"
+                android:textColorLink="@color/white_1"
+                />
+
+            <TextView
+                style="@style/about_us_tv"
+                android:autoLink="phone"
+                android:text="@string/company_phone"
+                />
+
+            <TextView
+                style="@style/about_us_tv"
+                android:text="@string/company_address"
+                android:textSize="14sp"
+                android:autoLink="all"
+                />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.constraint.ConstraintLayout>

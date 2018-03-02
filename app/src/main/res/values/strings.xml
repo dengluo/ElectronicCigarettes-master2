@@ -1,0 +1,139 @@
+<resources>
+    <string name="app_name">电子烟</string>
+    <string name="and" translatable="false"><![CDATA[&]]></string>
+    <string name="loading">正在加载…</string>
+    <string name="please_enable_the_bluetooth">请打开蓝牙</string>
+    <string name="device_not_connected">请先连接设备</string>
+    <string name="already_bind">已经绑定了设备</string>
+
+    <string name="just_now">刚刚</string>
+    <string name="sec_before">%d秒前</string>
+    <string name="min_before">%d分钟前</string>
+    <string name="today">今天%tR</string>
+    <string name="yesterday">昨天%tR</string>
+    <string name="mill" translatable="false">%tc</string>
+
+    <string name="login">登入</string>
+    <string name="register">注册</string>
+    <string name="forget_pwd">忘记密码？</string>
+    <string name="plz_input_email">请输入邮箱</string>
+    <string name="plz_input_pwd">请输入密码</string>
+    <string name="plz_input_pwd_again">请再次输入密码</string>
+    <string name="pwd_input_diff">两次输入的密码不一致</string>
+    <string name="no_set">未设置</string>
+    <string name="cancel">取消</string>
+    <string name="confirm">确认</string>
+    <string name="email_already_register">邮箱已被注册</string>
+    <string name="register_failure">注册失败</string>
+    <string name="register_success_plz_check_email">注册成功，请注意查收验证邮件</string>
+    <string name="register_now">正在注册…</string>
+    <string name="login_now">正在登录…</string>
+    <string name="email_pwd_input_err">邮箱／密码错误</string>
+    <string name="email_need_check">邮箱未验证，请验证邮箱后登录</string>
+    <string name="reset_password">重置密码</string>
+    <string name="send_reset_pwd_info">正在发送重置请求…</string>
+    <string name="already_send_reset_email">已发送验证邮件到您的邮箱，根据邮箱提示操作即可</string>
+    <string name="email_address_err">邮箱信息校验出错</string>
+    <string name="search">搜寻</string>
+    <string name="searching">正在搜索…</string>
+    <string name="search_again">重试</string>
+    <string name="selected_device">选择设备</string>
+    <string name="concern_us">关注我们</string>
+    <string name="count_number">口数</string>
+    <string name="notes">备注</string>
+    <string name="notification">提醒</string>
+    <string name="evaluate">评价</string>
+    <string name="set">设定</string>
+    <string name="common_set">通用指数</string>
+    <string name="product_select">产品选择</string>
+    <string name="v" translatable="false">V</string>
+    <string name="t" translatable="false">T</string>
+    <string name="h" translatable="false">H</string>
+    <string name="temp_unit" translatable="false">℃</string>
+    <string name="p" translatable="false">P</string>
+    <string name="off">OFF</string>
+    <string name="on">ON</string>
+    <string name="shake">震动</string>
+    <string name="user_use_number">口数</string>
+    <string name="temp">温度</string>
+    <string name="power_time">充电时间</string>
+    <string name="power_count">充电次数</string>
+    <string name="dcv">电压</string>
+    <string name="ota">固件升级</string>
+    <string name="app_user_info">账户信息</string>
+    <string name="change_pwd">变更密码</string>
+    <string name="plz_input_new_pwd_again">请再次输入新密码</string>
+    <string name="plz_input_new_pwd">请输入新密码</string>
+    <string name="plz_input_old_pwd">请输入旧密码</string>
+    <string name="change_pwd_success">密码修改成功</string>
+    <string name="change_pwd_failure">密码修改失败</string>
+    <string name="change_pwd_now">正在修改密码…</string>
+    <string name="vibration">震动</string>
+    <string name="work_time_set">单循环工作时间</string>
+    <string name="temp_set">温度设定</string>
+    <string name="parameter_not_null">参数不能为空</string>
+    <string name="every_day_use_num_plan">每日口数计划</string>
+    <string name="loop_use_num_plan">每循环口数计划</string>
+    <string name="use_num_plan_suggest">，建议值在</string>
+    <string name="between">之间</string>
+    <string name="plz_set_price">请设置价格</string>
+    <string name="loop_time">单循环时间</string>
+    <string name="m" translatable="false">M</string>
+    <string name="s" translatable="false">S</string>
+    <string name="smoke_price">一包烟的价格</string>
+    <string name="money_type">币种</string>
+    <string name="www_ciggo_com" translatable="false">www.ciggo.com</string>
+    <string name="send">发送</string>
+    <string name="plz_input_user_feedback">请输入您的反馈</string>
+    <string name="plz_input_feedback">请输入反馈内容</string>
+    <string name="send_feedback_msg_success">感谢您的反馈，我们会悉心听取您的意见。</string>
+    <string name="send_feedback_msg_failure">反馈提交失败，请重试</string>
+    <string name="notes_info">
+        \n
+        1:使用该APP前,你必须先用私人邮箱注册，且该邮箱将为密码恢复邮箱。
+        \n
+        \n
+        2:你必须选择正确的产品名
+        \n
+        \n
+        3:每循环口数计划是对每次通电时口数限制的计划。
+        \n
+        \n
+        4:温度选择其实是轻度抽烟者和重度抽烟者的选择，重度抽烟者用高温，轻度抽烟者用低温。
+        \n
+        \n
+        5:如果你不需要振动功能，可以关掉。
+        \n
+        \n
+        6:提醒页面有充电提醒，口数限制和设备维护这些信息。
+        \n
+        \n
+        7:充电维护是30天未充电的提醒。</string>
+    <string name="company_name" translatable="false">葆威道科技有限公司</string>
+    <string name="all_sum_num">总计节省费用</string>
+    <string name="save">省钱</string>
+    <string name="every_month">每月</string>
+    <string name="every_week">每周</string>
+    <string name="every_day">每天</string>
+    <string name="use_num_plan_warning">口数计划警告</string>
+    <string name="surplus_num">剩余口数</string>
+    <string name="charge_maintenance">充电维护</string>
+    <string name="clean">清洁</string>
+    <string name="have_clean">已经清洁？</string>
+    <string name="have_charge">已经充电？</string>
+    <string name="need_charge">需要充电</string>
+    <string name="low_power_waining">低压警告</string>
+    <string name="vapor_meet">vapor meet</string>
+    <string name="vape_world">vape world</string>
+    <string name="use_product_name">使用产品名称</string>
+    <string name="email">邮箱</string>
+    <string name="log_out">注销登录</string>
+    <string name="confirm_log_out_app">确定退出当前登录账号？</string>
+    <string name="unbind_device">解绑设备</string>
+    <string name="confirm_unbind_device">确认解绑当前设备？</string>
+    <string name="usd">美元</string>
+    <string name="rmb">人民币</string>
+    <string name="hk">港币</string>
+
+
+</resources>

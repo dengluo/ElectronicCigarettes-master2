@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_1"
+    >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1">
+
+        <include
+            layout="@layout/include_main_top_logo"
+            />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/v_debug"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_debug"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DugView\n"
+                android:textColor="@color/white_1"
+                android:textSize="10sp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/v_debug"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <Button
+                android:id="@+id/bt_product_list"
+                style="@style/bt_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:gravity="center"
+                android:text="@string/product_select"
+                />
+
+            <Button
+                android:id="@+id/bt_common_set"
+                style="@style/bt_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="100dp"
+                android:layout_marginStart="100dp"
+                android:text="@string/common_set"/>
+
+            <Button
+                android:id="@+id/bt_set"
+                style="@style/bt_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="100dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/set"
+                />
+
+            <LinearLayout
+                android:id="@+id/main_linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                >
+
+                <Button
+                    android:id="@+id/bt_evaluation"
+                    style="@style/main_middle_bt"
+                    android:text="@string/evaluate"
+                    />
+
+                <Button
+                    android:id="@+id/bt_notification"
+                    style="@style/main_middle_bt"
+                    android:text="@string/notification"
+                    />
+
+                <Button
+                    android:id="@+id/bt_info"
+                    style="@style/main_middle_bt"
+                    android:text="@string/notes"
+                    />
+
+                <Button
+                    android:id="@+id/bt_user_number"
+                    style="@style/main_middle_bt"
+                    android:text="@string/count_number"
+                    android:visibility="gone"
+                    />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_concern_us"
+                style="@style/bt_style"
+                android:layout_marginBottom="20dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="60dp"
+                android:text="@string/concern_us"/>
+
+            <Button
+                android:id="@+id/bt_unbind"
+                style="@style/bt_style"
+                android:layout_marginBottom="20dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginStart="100dp"
+                android:text="@string/unbind_device"
+                tools:visibility="gone"
+                />
+
+            <Button
+                android:id="@+id/bt_log_out"
+                style="@style/bt_style"
+                android:layout_marginBottom="20dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginStart="100dp"
+                android:text="@string/log_out"/>
+
+            <TextView
+                android:id="@+id/tv_app_version"
+                style="@style/Default_font_size_16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="v1"
+                android:textColor="@color/blue_1"
+                />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.constraint.ConstraintLayout>

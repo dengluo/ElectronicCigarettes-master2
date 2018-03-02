@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/bt_product_item"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/black_1"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:padding="10dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="132dp"
+        android:layout_height="132dp"
+        android:background="@drawable/selector_bt"
+        >
+
+        <TextView
+            android:id="@+id/tv_product_name_one"
+            style="@style/Default_font_size_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="产品名"
+            android:textColor="@color/white_1"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_product_name_two"
+        style="@style/Default_font_size_14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="产品名"
+        android:textColor="@color/white_2"
+        />
+
+</LinearLayout>

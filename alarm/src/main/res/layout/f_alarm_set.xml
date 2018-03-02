@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_3"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        style="@style/top_rl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            style="@style/top_rl_tv"
+            android:text="@string/alarm_set"
+            />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line1"
+        style="@style/vertical_line"
+        android:background="@color/white_2"
+        app:layout_constraintTop_toBottomOf="@+id/rl1"
+        />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/line1"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <com.bauway.alarm.util.MyNumberPicker.MyNumberPicker
+                    android:id="@+id/num_picker_hour"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    >
+                </com.bauway.alarm.util.MyNumberPicker.MyNumberPicker>
+
+                <com.bauway.alarm.util.MyNumberPicker.MyNumberPicker
+                    android:id="@+id/num_picker_min"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/tran_1"
+                    >
+                </com.bauway.alarm.util.MyNumberPicker.MyNumberPicker>
+
+                <com.bauway.alarm.util.MyNumberPicker.MyNumberPicker
+                    android:id="@+id/num_picker_am_pm"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/tran_1"
+                    >
+                </com.bauway.alarm.util.MyNumberPicker.MyNumberPicker>
+            </LinearLayout>
+
+            <View
+                style="@style/vertical_line"
+                android:background="@color/black_1"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <RelativeLayout
+                    style="@style/style_rl">
+
+                    <TextView
+                        style="@style/style_set_tv"
+                        android:layout_alignParentStart="true"
+                        android:text="@string/alarm"/>
+                    <!--<TextView-->
+                    <!--android:id="@+id/tv_alarm_time"-->
+                    <!--style="@style/style_set_tv"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:text="09:22"-->
+                    <!--/>-->
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/bt_switch_alarm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        />
+                </RelativeLayout>
+
+                <View
+                    style="@style/vertical_line"
+                    />
+
+                <RelativeLayout
+                    style="@style/style_rl">
+
+                    <TextView
+                        style="@style/style_set_tv"
+                        android:layout_alignParentStart="true"
+                        android:text="@string/switch_lights"/>
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/bt_switch_vibration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        />
+                </RelativeLayout>
+
+                <View
+                    style="@style/vertical_line"
+                    />
+
+                <RelativeLayout
+                    style="@style/style_rl">
+
+                    <TextView
+                        style="@style/style_set_tv"
+                        android:layout_alignParentStart="true"
+                        android:text="@string/alarm_ring"/>
+
+                    <TextView
+                        android:id="@+id/tv_ring_name"
+                        style="@style/style_set_tv"
+                        android:layout_centerInParent="true"
+                        android:text="默认"
+                        android:textColor="@color/blue_3"
+                        />
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/switch_ring"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        />
+                </RelativeLayout>
+
+                <View
+                    style="@style/vertical_line"
+                    />
+
+                <RelativeLayout
+                    style="@style/style_rl">
+
+                    <TextView
+                        style="@style/style_set_tv"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/grade_scale"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:padding="4dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/bt_scale_one"
+                            style="@style/style_alarm_tv"
+                            android:background="@drawable/shape_white_tran_rectangle_left"
+                            android:text="@string/scale_one"
+                            android:textColor="@color/white_1"/>
+
+                        <TextView
+                            android:id="@+id/bt_scale_two"
+                            style="@style/style_alarm_tv"
+                            android:background="@drawable/shape_white_tran_rectangle_middle"
+                            android:text="@string/scale_two"
+                            android:textColor="@color/white_1"
+                            />
+
+                        <TextView
+                            android:id="@+id/bt_scale_three"
+                            style="@style/style_alarm_tv"
+                            android:background="@drawable/shape_white_tran_rectangle_right"
+                            android:text="@string/scale_three"
+                            android:textColor="@color/white_1"
+                            />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    style="@style/vertical_line"
+                    />
+
+                <RelativeLayout
+                    style="@style/style_rl">
+
+                    <TextView
+                        style="@style/style_set_tv"
+                        android:layout_alignParentStart="true"
+                        android:text="@string/device"/>
+
+                    <TextView
+                        android:id="@+id/tv_bind_status"
+                        style="@style/style_set_tv"
+                        android:layout_centerInParent="true"
+                        android:text="@string/no_bind_device"
+                        android:textColor="@color/blue_3"
+                        />
+
+                    <TextView
+                        android:id="@+id/bt_bind_device"
+                        style="@style/style_set_tv"
+                        android:layout_alignParentEnd="true"
+                        android:text="@string/bind"
+                        />
+                </RelativeLayout>
+
+                <View
+                    style="@style/vertical_line"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.constraint.ConstraintLayout>

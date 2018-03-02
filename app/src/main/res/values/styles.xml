@@ -1,0 +1,370 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/blue_1</item>
+        <item name="colorPrimaryDark">@color/black_1</item>
+        <item name="colorAccent">@color/blue_1</item>
+        <item name="colorControlActivated">@color/blue_3</item>
+        <item name="colorSwitchThumbNormal">@color/black_2</item>
+    </style>
+
+    <style name="launch_app_theme" parent="AppTheme">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowBackground">@color/black_1</item>
+    </style>
+
+    <style name="Default_font_size_10">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="Default_font_size_12">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Default_font_size_16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Default_font_size_14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Default_font_size_18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Default_font_size_20">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Default_font_size_24">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="Default_font_size_30">
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="vertical_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/white_1</item>
+    </style>
+
+    <style name="login_iv_style">
+        <item name="android:layout_width">26dp</item>
+        <item name="android:layout_height">26dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:layout_gravity">bottom</item>
+    </style>
+
+    <style name="login_til" parent="Default_font_size_16">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:textColorHint">@color/white_1</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+
+    <style name="login_item_ll">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">46dp</item>
+        <item name="android:layout_marginStart">4dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="cancelBtShadow" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white_1</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="bt_style" parent="cancelBtShadow">
+        <item name="android:background">@drawable/selector_bt</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+    <style name="main_middle_bt" parent="bt_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/selector_bt</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <style name="bt_style_1" parent="cancelBtShadow">
+        <item name="android:background">@drawable/selector_bt_1</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="bt_style_4" parent="cancelBtShadow">
+        <item name="android:background">@drawable/selector_bt_4</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="concern_us_bt_style" parent="bt_style_4">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_margin">20dp</item>
+        <item name="android:textColor">@color/blue_1</item>
+    </style>
+
+    <style name="bt_return">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/selector_bt_2</item>
+        <item name="android:padding">14dp</item>
+    </style>
+
+    <style name="bt_return_1" parent="bt_return">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/selector_bt_3</item>
+    </style>
+
+    <style name="login_ll_one">
+        <item name="android:layout_width">180dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginTop">42dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="login_rl">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="login_ll">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">50dp</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingEnd">40dp</item>
+        <item name="android:paddingStart">40dp</item>
+    </style>
+
+    <style name="et_one" parent="Default_font_size_16">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@null</item>
+        <item name="android:inputType">textEmailAddress</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">@color/white_1</item>
+        <item name="android:textColorHint">@color/blue_1</item>
+    </style>
+
+    <style name="login_ll_two">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">45dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="ll_bg">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/black_1</item>
+    </style>
+
+    <style name="et_two" parent="Default_font_size_16">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@null</item>
+        <item name="android:inputType">textPassword</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">@color/white_1</item>
+        <item name="android:textColorHint">@color/blue_1</item>
+    </style>
+
+    <style name="common_dcv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/shape_bt_bg_false</item>
+        <item name="android:textColor">@color/white_1</item>
+        <item name="android:padding">6dp</item>
+    </style>
+
+    <style name="common_rl">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:background">@drawable/shape_bt_bg_false</item>
+    </style>
+
+    <style name="tv_common_center" parent="Default_font_size_16">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textColor">@color/white_1</item>
+    </style>
+
+    <style name="common_info_unit" parent="Default_font_size_18">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginEnd">30dp</item>
+        <item name="android:textColor">@color/white_1</item>
+    </style>
+
+    <style name="common_ll">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+    </style>
+
+    <style name="set_ll">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginEnd">20dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="set_ll_1">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">80dp</item>
+        <item name="android:background">@drawable/shape_bt_bg_false</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">4dp</item>
+    </style>
+
+    <style name="set_ll_2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+    </style>
+
+    <style name="set_activity_base" parent="Default_font_size_14">
+
+    </style>
+
+
+    <style name="set_base_center_view" parent="set_activity_base">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">3</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="set_et" parent="set_base_center_view">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_weight">6</item>
+        <item name="android:background">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white_1</item>
+        <item name="android:inputType">number</item>
+        <item name="android:maxLength">4</item>
+    </style>
+
+    <style name="every_day_use_number" parent="set_activity_base">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/white_1</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="set_ll_3">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">80dp</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:background">@drawable/shape_bt_bg_false</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="set_bt" parent="set_activity_base">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:background">@drawable/selector_bt</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:textColor">@color/white_1</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="use_base" parent="Default_font_size_14">
+
+    </style>
+
+    <style name="use_tv" parent="use_base">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">4</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/white_1</item>
+    </style>
+
+    <style name="use_tv_1" parent="use_tv">
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_weight">6</item>
+    </style>
+
+    <style name="use_ll">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/shape_bt_bg_false</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="use_ll_2" parent="use_ll">
+        <item name="android:layout_marginStart">20dp</item>
+    </style>
+
+    <style name="use_bg">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">20dp</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="launcher_iv_style">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">36dp</item>
+    </style>
+
+    <style name="bt_style_5" parent="bt_style">
+        <item name="android:layout_width">90dp</item>
+        <item name="android:layout_height">40dp</item>
+    </style>
+
+    <style name="et_pwd_til">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColorHint">@color/white_1</item>
+    </style>
+
+    <style name="et_pwd_til_1" parent="et_pwd_til">
+        <item name="android:layout_marginTop">20dp</item>
+    </style>
+
+    <style name="et_pwd_content" parent="Default_font_size_14">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@null</item>
+        <item name="android:textColor">@color/white_1</item>
+    </style>
+
+
+</resources>

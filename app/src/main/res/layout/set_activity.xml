@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_1"
+    >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <include
+            layout="@layout/main_title_logo_and_return"
+            />
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="@+id/main_content"
+        app:layout_constraintLeft_toLeftOf="@+id/main_content"
+        app:layout_constraintRight_toRightOf="@id/main_content"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout1"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                style="@style/set_ll">
+
+                <LinearLayout
+                    style="@style/set_ll_1">
+
+                    <LinearLayout
+                        style="@style/set_ll_2">
+
+                        <TextView
+                            android:id="@+id/bt_off"
+                            style="@style/set_bt"
+                            android:text="@string/off"
+                            />
+
+                        <RelativeLayout
+                            style="@style/set_base_center_view"
+                            android:layout_gravity="center"
+                            >
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/bt_switch_shake"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:padding="3dp"
+                                android:switchMinWidth="20dp"
+                                android:textOff=""
+                                android:textOn=""
+                                />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/bt_on"
+                            style="@style/set_bt"
+                            android:text="@string/on"
+                            />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/every_day_use_number"
+                        android:text="@string/vibration"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/set_ll_1"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        style="@style/set_ll_2">
+
+                        <ImageButton
+                            android:id="@+id/bt_user_number_subtract"
+                            style="@style/set_bt"
+                            app:srcCompat="@drawable/vector_drawable_minus"/>
+
+                        <EditText
+                            android:id="@+id/et_set_use_number"
+                            style="@style/set_et"
+                            android:text="300"/>
+
+                        <ImageButton
+                            android:id="@+id/bt_user_number_add"
+                            style="@style/set_bt"
+                            app:srcCompat="@drawable/vector_drawable_plus"
+                            />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        style="@style/every_day_use_number"
+                        android:text="@string/every_day_use_num_plan"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/set_ll_3">
+
+                    <LinearLayout
+                        style="@style/set_ll_2">
+
+                        <ImageButton
+                            android:id="@+id/bt_loop_number_subtract"
+                            style="@style/set_bt"
+                            app:srcCompat="@drawable/vector_drawable_minus"
+                            />
+
+                        <EditText
+                            android:id="@+id/et_set_loop_number_plan"
+                            style="@style/set_et"
+                            android:text="15"/>
+
+                        <ImageButton
+                            android:id="@+id/bt_loop_number_add"
+                            style="@style/set_bt"
+                            app:srcCompat="@drawable/vector_drawable_plus"
+                            />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/every_day_use_number"
+                        android:text="@string/loop_use_num_plan"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/set_ll">
+
+                <LinearLayout
+                    style="@style/set_ll_1">
+
+                    <LinearLayout
+                        style="@style/set_ll_2">
+
+                        <ImageButton
+                            android:id="@+id/bt_temp_subtract"
+                            style="@style/set_bt"
+                            app:srcCompat="@drawable/vector_drawable_minus"
+                            />
+
+                        <EditText
+                            android:id="@+id/et_temp"
+                            style="@style/set_et"
+                            android:text="225"/>
+
+                        <ImageButton
+                            android:id="@+id/bt_temp_add"
+                            style="@style/set_bt"
+                            app:srcCompat="@drawable/vector_drawable_plus"
+                            />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/every_day_use_number"
+                        android:text="@string/temp_set"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/set_ll_3">
+
+                    <LinearLayout
+                        style="@style/set_ll_2">
+
+                        <ImageButton
+                            android:id="@+id/bt_time_subtract"
+                            style="@style/set_bt"
+                            app:srcCompat="@drawable/vector_drawable_minus"
+                            />
+
+                        <EditText
+                            android:id="@+id/et_time"
+                            style="@style/set_et"
+                            android:text="5"/>
+
+                        <ImageButton
+                            android:id="@+id/bt_time_add"
+                            style="@style/set_bt"
+                            app:srcCompat="@drawable/vector_drawable_plus"
+                            />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/every_day_use_number"
+                        android:text="@string/work_time_set"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/set_ll"
+                android:visibility="gone"
+                >
+
+                <LinearLayout
+                    style="@style/set_ll_1">
+
+                    <LinearLayout
+                        style="@style/set_ll_2">
+
+                        <EditText
+                            android:id="@+id/et_price"
+                            style="@style/set_et"
+                            android:layout_width="160dp"
+                            android:text="10"/>
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/every_day_use_number"
+                        android:text="@string/smoke_price"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/set_ll_3">
+
+                    <RelativeLayout
+                        style="@style/set_ll_2">
+
+                        <Spinner
+                            android:id="@+id/spinner_money_select"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:backgroundTint="@color/white_1"
+                            android:dropDownHorizontalOffset="40dp"
+                            android:dropDownVerticalOffset="30dp"
+                            android:popupBackground="@color/blue_1"
+                            >
+                        </Spinner>
+                    </RelativeLayout>
+
+                    <TextView
+                        style="@style/every_day_use_number"
+                        android:text="@string/money_type"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <!--<LinearLayout-->
+            <!--style="@style/set_ll">-->
+            <!--<LinearLayout-->
+            <!--style="@style/set_ll_1">-->
+            <!--<LinearLayout-->
+            <!--style="@style/set_ll_2">-->
+            <!--<TextView-->
+            <!--android:id="@+id/bt_off"-->
+            <!--style="@style/set_bt"-->
+            <!--android:text="@string/off"-->
+            <!--/>-->
+            <!--<RelativeLayout-->
+            <!--style="@style/set_base_center_view"-->
+            <!--android:layout_gravity="center"-->
+            <!--&gt;-->
+            <!--<android.support.v7.widget.SwitchCompat-->
+            <!--android:id="@+id/bt_switch_shake"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:padding="3dp"-->
+            <!--android:switchMinWidth="20dp"-->
+            <!--android:textOff=""-->
+            <!--android:textOn=""-->
+            <!--/>-->
+            <!--</RelativeLayout>-->
+            <!--<TextView-->
+            <!--android:id="@+id/bt_on"-->
+            <!--style="@style/set_bt"-->
+            <!--android:text="@string/on"-->
+            <!--/>-->
+            <!--</LinearLayout>-->
+            <!--<TextView-->
+            <!--style="@style/every_day_use_number"-->
+            <!--android:text="@string/vibration"-->
+            <!--/>-->
+            <!--</LinearLayout>-->
+            <!--<LinearLayout-->
+            <!--style="@style/set_ll_3"-->
+            <!--android:visibility="invisible"-->
+            <!--&gt;-->
+            <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:paddingEnd="100dp"
+                android:paddingStart="100dp"
+                android:visibility="visible"
+                >
+
+                <Button
+                    android:id="@+id/btn_ota"
+                    style="@style/bt_style"
+                    android:text="@string/ota"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.constraint.ConstraintLayout>

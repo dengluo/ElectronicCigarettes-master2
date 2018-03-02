@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_1">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1">
+
+        <include
+            layout="@layout/main_title_logo_and_return"
+            />
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="1dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout1"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="36dp"
+            >
+
+            <LinearLayout
+                style="@style/common_ll">
+
+                <Button
+                    style="@style/common_dcv"
+                    android:text="@string/loop_time"/>
+
+                <RelativeLayout
+                    style="@style/common_rl">
+
+                    <TextView
+                        android:id="@+id/tv_loop_time"
+                        style="@style/tv_common_center"
+                        android:text="0"
+                        />
+
+                    <TextView
+                        style="@style/common_info_unit"
+                        android:text="@string/s"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/common_ll">
+
+                <Button
+                    style="@style/common_dcv"
+                    android:text="@string/dcv"/>
+
+                <RelativeLayout
+                    style="@style/common_rl">
+
+                    <TextView
+                        android:id="@+id/tv_dcv"
+                        style="@style/tv_common_center"
+                        android:text="0"
+                        />
+
+                    <TextView
+                        style="@style/common_info_unit"
+                        android:text="@string/v"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/common_ll">
+
+                <Button
+                    style="@style/common_dcv"
+                    android:text="@string/power_count"/>
+
+                <RelativeLayout
+                    style="@style/common_rl">
+
+                    <TextView
+                        android:id="@+id/tv_charge_count"
+                        style="@style/tv_common_center"
+                        android:layout_alignBottom="@+id/textView5"
+                        android:layout_centerHorizontal="true"
+                        android:text="0"/>
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        style="@style/common_info_unit"
+                        android:text="@string/t"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/common_ll">
+
+                <Button
+                    style="@style/common_dcv"
+                    android:text="@string/power_time"/>
+
+                <RelativeLayout
+                    style="@style/common_rl">
+
+                    <TextView
+                        android:id="@+id/tv_charge_tv"
+                        style="@style/tv_common_center"
+                        android:text="0"
+                        />
+
+                    <TextView
+                        style="@style/common_info_unit"
+                        android:text="@string/h"
+                        android:visibility="gone"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/common_ll">
+
+                <Button
+                    style="@style/common_dcv"
+                    android:text="@string/temp"/>
+
+                <RelativeLayout
+                    style="@style/common_rl">
+
+                    <TextView
+                        android:id="@+id/tv_temp"
+                        style="@style/tv_common_center"
+                        android:text="0"
+                        />
+
+                    <TextView
+                        style="@style/common_info_unit"
+                        android:text="@string/temp_unit"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/common_ll">
+
+                <Button
+                    style="@style/common_dcv"
+                    android:text="@string/user_use_number"/>
+
+                <RelativeLayout
+                    style="@style/common_rl">
+
+                    <TextView
+                        android:id="@+id/tv_use_num"
+                        style="@style/tv_common_center"
+                        android:text="0"
+                        />
+
+                    <TextView
+                        style="@style/common_info_unit"
+                        android:text="@string/p"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/common_ll">
+
+                <Button
+                    style="@style/common_dcv"
+                    android:text="@string/shake"/>
+
+                <RelativeLayout
+                    style="@style/common_rl">
+
+                    <TextView
+                        style="@style/tv_common_center"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/off"
+                        />
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/bt_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:enabled="false"
+                        android:padding="10dp"
+                        android:switchMinWidth="50dp"
+                        android:textOff=""
+                        android:textOn=""
+                        />
+
+                    <TextView
+                        style="@style/common_info_unit"
+                        android:text="@string/on"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_app_user"
+                style="@style/bt_style"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:text="@string/app_user_info"
+                />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.constraint.ConstraintLayout>

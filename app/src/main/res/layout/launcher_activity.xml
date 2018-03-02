@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/ll_bg"
+    >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginStart="60dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_bt_bg_false_4"
+                android:padding="4dp"
+                >
+
+                <ImageView
+                    android:src="@drawable/logo_8_black"
+                    style="@style/launcher_iv_style"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/shape_bt_bg_false_4"
+                android:padding="4dp"
+                >
+
+                <ImageView
+                    style="@style/launcher_iv_style"
+                    android:src="@drawable/logo_2_black"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/shape_bt_bg_false_4"
+                android:padding="4dp"
+                >
+
+                <ImageView
+                    style="@style/launcher_iv_style"
+                    android:src="@drawable/logo_1_black"
+                    />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical"
+                >
+
+                <Button
+                    style="@style/bt_style_5"
+                    android:text="@string/vapor_meet"
+                    />
+
+                <Button
+                    style="@style/bt_style_5"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/vape_world"
+                    />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

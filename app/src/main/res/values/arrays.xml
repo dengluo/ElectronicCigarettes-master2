@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="money_type">
+        <item>@string/usd</item>
+        <item>@string/rmb</item>
+        <item>@string/hk</item>
+    </string-array>
+</resources>

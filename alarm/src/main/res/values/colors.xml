@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="tran_1">#00000000</color>
+
+    <color name="white_1">#FFFFFF</color>
+    <color name="white_2">#47665959</color>
+    <color name="white_3">#47e6dbdb</color>
+
+    <color name="blue_1">#4db9ff</color>
+    <color name="blue_2">#804DB9FF</color>
+    <color name="blue_3">#3366ff</color>
+
+
+    <color name="black_1">#000000</color>
+    <color name="black_2">#212121</color>
+    <color name="black_3">#60212121</color>
+    <color name="black_4">#43e4bbbb</color>
+
+    <color name="yellow_1">#e7d80a</color>
+
+</resources>

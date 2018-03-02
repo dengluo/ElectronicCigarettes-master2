@@ -1,0 +1,80 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.bauway.alarm"
+        minSdkVersion 19
+        targetSdkVersion 19
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    //lint检查,有任何的错误或者警告提示,都会终止构建,可以将其关掉。
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+        checkReleaseBuilds false
+    }
+    signingConfigs {
+        release {
+            storeFile file('ElectronicCigarettes.jks')
+            storePassword 'bauway'
+            keyAlias 'bauway'
+            keyPassword 'bauway'
+        }
+    }
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            applicationIdSuffix ".debug"
+            //是否打开debuggable开关
+            debuggable true
+            //是否打开jniDebuggable开关
+            jniDebuggable false
+            //签名配置
+            signingConfig signingConfigs.release
+        }
+    }
+    flavorDimensions "product"
+    productFlavors {
+        p1 {
+            dimension "product"
+            applicationIdSuffix ".p1"
+            versionCode 12
+            versionName "1.2"
+            buildConfigField "int", "PROJECT_NO", "1"
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.0.2'
+    implementation 'com.android.support:support-v4:27.0.2'
+    implementation 'com.android.support:design:27.0.2'
+    implementation 'com.android.support:design:27.0.2'
+    implementation 'com.android.support:multidex:1.0.2'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation 'com.blankj:utilcode:1.9.1'
+    releaseCompile 'com.tencent.bugly:crashreport:2.6.5'
+    //bmob-sdk：Bmob的android sdk包，包含了Bmob的数据存储、文件等服务，以下是最新的bmob-sdk:
+    compile 'cn.bmob.android:bmob-sdk:3.5.8'
+    implementation project(':smablelib')
+    debugCompile project(':stetho')
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.zhy:base-adapter:3.0.3'
+    //RxJava
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.0'
+    //RxAndroid
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    //rxlifecycle2
+    implementation 'com.trello.rxlifecycle2:rxlifecycle:2.0.1'
+    implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.0.1'
+}

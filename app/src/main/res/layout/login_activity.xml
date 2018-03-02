@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              style="@style/ll_bg"
+    >
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                style="@style/login_rl"
+                >
+
+
+                <include layout="@layout/include_login_logo"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                style="@style/login_ll"
+                >
+
+                <LinearLayout
+                    style="@style/login_item_ll">
+
+                    <ImageView
+                        style="@style/login_iv_style"
+                        app:srcCompat="@drawable/vector_drawable_email"/>
+
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/login_til"
+                        android:hint="@string/plz_input_email"
+                        >
+
+                        <EditText
+                            android:id="@+id/et_login_email"
+                            style="@style/et_one"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+                <View
+                    style="@style/vertical_line"/>
+
+                <LinearLayout
+                    style="@style/login_item_ll"
+                    android:layout_marginTop="30dp"
+                    >
+
+                    <ImageView
+                        style="@style/login_iv_style"
+                        android:layout_marginBottom="10dp"
+                        app:srcCompat="@drawable/vector_drawable_pwd"/>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:hint="@string/plz_input_pwd"
+                        style="@style/login_til"
+                        app:passwordToggleEnabled="true"
+                        app:passwordToggleTint="@color/white_1"
+                        >
+
+                        <EditText
+                            android:id="@+id/et_login_pwd"
+                            style="@style/et_two"/>
+
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+                <View
+                    style="@style/vertical_line"/>
+
+                <LinearLayout
+                    style="@style/login_ll_two"
+                    >
+
+                    <Button
+                        android:id="@+id/bt_login"
+                        style="@style/bt_style"
+                        android:text="@string/login"
+                        />
+
+                    <Button
+                        android:id="@+id/bt_register"
+                        style="@style/bt_style_1"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/register"
+                        />
+
+                    <TextView
+                        android:id="@+id/bt_forget_pwd"
+                        style="@style/Default_font_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="24dp"
+                        android:text="@string/forget_pwd"
+                        android:textColor="@color/white_1"
+                        />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

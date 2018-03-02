@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/ll_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/include_return"
+        />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include layout="@layout/include_login_logo"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout4"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textInputLayout"
+                style="@style/et_pwd_til"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/white_1">
+
+                <EditText
+                    android:id="@+id/et_old_pwd"
+                    style="@style/et_pwd_content"
+                    android:hint="@string/plz_input_old_pwd"
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <View
+                android:id="@+id/line1"
+                style="@style/vertical_line"
+                android:layout_marginTop="6dp"
+                />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textInputLayout1"
+                style="@style/et_pwd_til_1"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/white_1">
+
+                <EditText
+                    android:id="@+id/et_new_pwd"
+                    style="@style/et_pwd_content"
+                    android:hint="@string/plz_input_new_pwd"
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <View
+                android:id="@+id/line2"
+                style="@style/vertical_line"
+                android:layout_marginTop="6dp"
+                />
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textInputLayout2"
+                style="@style/et_pwd_til_1"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/white_1">
+
+                <EditText
+                    android:id="@+id/et_new_pwd_again"
+                    style="@style/et_pwd_content"
+                    android:hint="@string/plz_input_new_pwd_again"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <View
+                android:id="@+id/view3"
+                style="@style/vertical_line"
+                android:layout_marginTop="6dp"
+                />
+
+            <Button
+                android:id="@+id/bt_confirm"
+                style="@style/bt_style"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="46dp"
+                android:text="@string/confirm"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>
