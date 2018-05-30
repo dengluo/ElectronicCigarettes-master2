@@ -1,66 +1,93 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black_1"
-    >
+    android:orientation="vertical">
 
     <RelativeLayout
-        android:id="@+id/relativeLayout1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        >
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/white_1"
+        android:padding="10dp">
 
-        <include
-            layout="@layout/main_title_logo_and_return"
-            />
+        <ImageView
+            android:id="@+id/action_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/selector_radio_return"
+            android:gravity="left|center_vertical"
+            android:padding="5dp" />
+
+        <TextView
+            style="@style/action_title"
+            android:text="@string/evaluate"
+            android:textColor="@color/black_1"
+            android:textSize="20dp" />
 
     </RelativeLayout>
 
-    <EditText
-        android:id="@+id/et_user_feedback"
-        style="@style/Default_font_size_14"
-        android:layout_width="0dp"
-        android:layout_height="200dp"
-        android:layout_margin="36dp"
-        android:background="@color/white_1"
-        android:gravity="top"
-        android:hint="@string/plz_input_user_feedback"
-        android:inputType="text"
-        android:maxLength="500"
-        android:padding="10dp"
-        android:textColor="@color/black_1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout1"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/text_color_6"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/bt_send_info"
-        style="@style/bt_style"
-        android:layout_marginEnd="100dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="30dp"
-        android:text="@string/send"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_user_feedback"
-        />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/text_color_5" />
 
-    <TextView
-        android:id="@+id/bt_www_address"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:text="@string/www_ciggo_com"
-        android:textColor="@color/white_1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/main_logo"
+            android:gravity="center" />
 
+        <EditText
+            android:id="@+id/et_user_feedback"
+            style="@style/Default_font_size_14"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="36dp"
+            android:gravity="top"
+            android:background="@drawable/shape_circle_edt_input"
+            android:hint="@string/plz_input_user_feedback"
+            android:inputType="text"
+            android:maxLength="500"
+            android:padding="10dp"
+            android:textColor="@color/black_1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout1"/>
 
-</android.support.constraint.ConstraintLayout>
+        <Button
+            android:id="@+id/bt_send_info"
+            style="@style/bt_style"
+            android:layout_marginEnd="100dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/send"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_user_feedback"
+            />
+
+        <TextView
+            android:id="@+id/bt_www_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="@string/www_ciggo_com"
+            android:textColor="@color/text_color_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+    </LinearLayout>
+</LinearLayout>

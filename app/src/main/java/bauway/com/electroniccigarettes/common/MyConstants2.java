@@ -17,8 +17,8 @@ public class MyConstants2 {
     public static final int USE_NUM_MAX = 1000;
     public static final int LOOP_NUM_MIN = 5;
     public static final int LOOP_NUM_MAX = 25;
-    public static final int TEMP_MIN = 190;
-    public static final int TEMP_MAX = 245;
+    public static final int TEMP_MIN = 210;//190;
+    public static final int TEMP_MAX = 235;//245;
     public static final int TIME_MIN = 180;
     public static final int TIME_MAX = 420;
 

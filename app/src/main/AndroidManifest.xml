@@ -21,10 +21,9 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/NoTitleFullscreen">
         <activity
             android:name=".activity.LauncherActivity"
-            android:theme="@style/launch_app_theme"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -35,16 +34,22 @@
             android:name=".activity.MainActivity"
             android:launchMode="singleTask"
             />
+        <activity
+            android:name=".activity.MainNewActivity"
+            android:launchMode="singleTask"
+            />
         <activity android:name=".activity.RegisterActivity"/>
         <activity android:name=".activity.ForgetPasswordActivity"/>
         <activity android:name=".activity.LoginActivity"/>
         <activity android:name=".activity.BindDeviceActivity"/>
         <activity android:name=".activity.ProductSelectActivity"/>
         <activity android:name=".activity.CommonSetActivity"/>
+        <activity android:name=".activity.CommonSetNewActivity"/>
         <activity android:name=".activity.ConcernUsActivity"/>
         <activity android:name=".activity.EvaluationActivity"/>
         <activity android:name=".activity.UserUseNumberActivity"/>
         <activity android:name=".activity.SetActivity"/>
+        <activity android:name=".activity.MeActivity"/>
         <activity android:name=".activity.NotificationActivity"/>
         <activity android:name=".activity.NotesActivity"/>
         <activity android:name=".activity.AppUserInfoActivity"/>

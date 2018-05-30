@@ -3,6 +3,7 @@ package bauway.com.electroniccigarettes.activity;
 import android.os.Bundle;
 import android.support.v4.widget.NestedScrollView;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -18,16 +19,8 @@ import butterknife.OnClick;
  */
 
 public class NotesActivity extends BaseActivity {
-    @BindView(R.id.bt_return)
-    ImageButton mBtReturn;
-    @BindView(R.id.relativeLayout)
-    RelativeLayout mRelativeLayout;
-    @BindView(R.id.tv_notes)
-    TextView mTvNotes;
-    @BindView(R.id.nestedScrollView2)
-    NestedScrollView mNestedScrollView2;
-    @BindView(R.id.LinearLayout1)
-    LinearLayout mLinearLayout1;
+    @BindView(R.id.action_back)
+    ImageView action_back;
 
     @Override
     protected int getLayoutRes() {
@@ -60,7 +53,7 @@ public class NotesActivity extends BaseActivity {
     }
 
 
-    @OnClick(R.id.bt_return)
+    @OnClick(R.id.action_back)
     public void onViewClicked() {
         this.finish();
     }

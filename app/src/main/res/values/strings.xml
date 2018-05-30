@@ -7,6 +7,7 @@
     <string name="already_bind">已经绑定了设备</string>
 
     <string name="just_now">刚刚</string>
+    <string name="index">首页</string>
     <string name="sec_before">%d秒前</string>
     <string name="min_before">%d分钟前</string>
     <string name="today">今天%tR</string>
@@ -44,6 +45,7 @@
     <string name="notification">提醒</string>
     <string name="evaluate">评价</string>
     <string name="set">设定</string>
+    <string name="me">我的</string>
     <string name="common_set">通用指数</string>
     <string name="product_select">产品选择</string>
     <string name="v" translatable="false">V</string>
@@ -134,6 +136,10 @@
     <string name="usd">美元</string>
     <string name="rmb">人民币</string>
     <string name="hk">港币</string>
+    <string name="youtube">Youtube</string>
+    <string name="facebook">Facebook</string>
+    <string name="twitter">Twitter</string>
+    <string name="instagram">Instagram</string>
 
 
 </resources>

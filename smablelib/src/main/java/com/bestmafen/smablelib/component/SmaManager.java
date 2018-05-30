@@ -13,7 +13,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.preference.PreferenceManager;
+import android.support.annotation.RequiresApi;
 import android.text.TextUtils;
 
 import com.bestmafen.easeblelib.connector.EaseConnector;
@@ -135,6 +137,7 @@ public class SmaManager {
         super();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
     public SmaManager init(Context context) {
         isExit = false;
         mContext = context.getApplicationContext();

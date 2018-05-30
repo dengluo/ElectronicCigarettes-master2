@@ -14,6 +14,16 @@
     <color name="black_1">#000000</color>
     <color name="black_2">#212121</color>
     <color name="black_3">#60212121</color>
+    <color name="black_trans15">#26000000</color>
+
+    <color name="text_color_1">#333333</color> <!-- 黑色 -->
+    <color name="text_color_2">#666666</color> <!-- 中黑色 -->
+    <color name="text_color_3">#999999</color> <!-- 浅色 -->
+    <color name="text_color_4">#cccccc</color> <!-- 浅灰色 -->
+    <color name="text_color_5">#dddddd</color> <!-- 标题栏下线 -->
+    <color name="text_color_6">#eeeeee</color>
+    <color name="sayes_txt_me_line">#c0fff2</color> <!-- 个人中心分割线 -->
+    <color name="black_trans10">#1a000000</color>
 
 
 </resources>

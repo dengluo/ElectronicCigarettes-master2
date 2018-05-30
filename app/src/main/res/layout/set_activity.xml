@@ -1,61 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black_1"
-    >
+    android:background="@color/black_1">
 
     <RelativeLayout
         android:id="@+id/relativeLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        >
+        app:layout_constraintTop_toTopOf="parent">
 
-        <include
-            layout="@layout/main_title_logo_and_return"
-            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@color/white_1"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/action_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/selector_radio_return"
+                android:gravity="left|center_vertical"
+                android:padding="5dp" />
+
+            <TextView
+                style="@style/action_title"
+                android:text="@string/set"
+                android:textColor="@color/black_1"
+                android:textSize="20dp" />
+
+        </RelativeLayout>
     </RelativeLayout>
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@color/text_color_6"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         app:layout_constraintBottom_toBottomOf="@+id/main_content"
         app:layout_constraintLeft_toLeftOf="@+id/main_content"
         app:layout_constraintRight_toRightOf="@id/main_content"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout1"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout1">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/text_color_5" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/main_logo"
+                android:gravity="center" />
 
             <LinearLayout
-                style="@style/set_ll">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
 
                 <LinearLayout
-                    style="@style/set_ll_1">
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_circle_edt_input"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/icon_set1" />
 
                     <LinearLayout
-                        style="@style/set_ll_2">
+                        style="@style/set_ll_2"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="20dp">
 
-                        <TextView
-                            android:id="@+id/bt_off"
-                            style="@style/set_bt"
-                            android:text="@string/off"
-                            />
 
                         <RelativeLayout
                             style="@style/set_base_center_view"
-                            android:layout_gravity="center"
-                            >
+                            android:layout_gravity="center">
 
                             <android.support.v7.widget.SwitchCompat
                                 android:id="@+id/bt_switch_shake"
@@ -65,177 +109,221 @@
                                 android:padding="3dp"
                                 android:switchMinWidth="20dp"
                                 android:textOff=""
-                                android:textOn=""
-                                />
+                                android:textOn="" />
                         </RelativeLayout>
 
-                        <TextView
-                            android:id="@+id/bt_on"
-                            style="@style/set_bt"
-                            android:text="@string/on"
-                            />
                     </LinearLayout>
 
                     <TextView
                         style="@style/every_day_use_number"
                         android:text="@string/vibration"
-                        />
+                        android:textColor="@color/text_color_2" />
                 </LinearLayout>
 
                 <LinearLayout
                     style="@style/set_ll_1"
                     android:visibility="gone">
 
-                    <LinearLayout
-                        style="@style/set_ll_2">
+                    <LinearLayout style="@style/set_ll_2">
 
                         <ImageButton
                             android:id="@+id/bt_user_number_subtract"
                             style="@style/set_bt"
-                            app:srcCompat="@drawable/vector_drawable_minus"/>
+                            app:srcCompat="@drawable/vector_drawable_minus" />
 
                         <EditText
                             android:id="@+id/et_set_use_number"
                             style="@style/set_et"
-                            android:text="300"/>
+                            android:text="300" />
 
                         <ImageButton
                             android:id="@+id/bt_user_number_add"
                             style="@style/set_bt"
-                            app:srcCompat="@drawable/vector_drawable_plus"
-                            />
+                            app:srcCompat="@drawable/vector_drawable_plus" />
                     </LinearLayout>
 
                     <TextView
                         android:id="@+id/textView4"
                         style="@style/every_day_use_number"
-                        android:text="@string/every_day_use_num_plan"/>
+                        android:text="@string/every_day_use_num_plan" />
                 </LinearLayout>
 
                 <LinearLayout
-                    style="@style/set_ll_3">
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_circle_edt_input"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/icon_set2" />
 
                     <LinearLayout
-                        style="@style/set_ll_2">
+                        style="@style/set_ll_2"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center">
 
                         <ImageButton
                             android:id="@+id/bt_loop_number_subtract"
-                            style="@style/set_bt"
-                            app:srcCompat="@drawable/vector_drawable_minus"
-                            />
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/icon_set_add" />
 
                         <EditText
                             android:id="@+id/et_set_loop_number_plan"
                             style="@style/set_et"
-                            android:text="15"/>
+                            android:text="15"
+                            android:textColor="@color/text_color_2" />
 
                         <ImageButton
                             android:id="@+id/bt_loop_number_add"
-                            style="@style/set_bt"
-                            app:srcCompat="@drawable/vector_drawable_plus"
-                            />
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/icon_set_jian" />
                     </LinearLayout>
 
                     <TextView
                         style="@style/every_day_use_number"
                         android:text="@string/loop_use_num_plan"
-                        />
+                        android:textColor="@color/text_color_2" />
                 </LinearLayout>
             </LinearLayout>
 
-            <LinearLayout
-                style="@style/set_ll">
+            <LinearLayout style="@style/set_ll">
 
                 <LinearLayout
-                    style="@style/set_ll_1">
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_circle_edt_input"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/icon_set3" />
 
                     <LinearLayout
-                        style="@style/set_ll_2">
+                        style="@style/set_ll_2"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center">
 
                         <ImageButton
                             android:id="@+id/bt_temp_subtract"
-                            style="@style/set_bt"
-                            app:srcCompat="@drawable/vector_drawable_minus"
-                            />
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/icon_set_jian" />
 
                         <EditText
                             android:id="@+id/et_temp"
                             style="@style/set_et"
-                            android:text="225"/>
+                            android:text="225"
+                            android:textColor="@color/text_color_2" />
 
                         <ImageButton
                             android:id="@+id/bt_temp_add"
-                            style="@style/set_bt"
-                            app:srcCompat="@drawable/vector_drawable_plus"
-                            />
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/icon_set_add" />
                     </LinearLayout>
 
                     <TextView
                         style="@style/every_day_use_number"
                         android:text="@string/temp_set"
-                        />
+                        android:textColor="@color/text_color_2" />
                 </LinearLayout>
 
                 <LinearLayout
-                    style="@style/set_ll_3">
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_circle_edt_input"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/icon_set4" />
 
                     <LinearLayout
-                        style="@style/set_ll_2">
+                        style="@style/set_ll_2"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center">
 
                         <ImageButton
                             android:id="@+id/bt_time_subtract"
-                            style="@style/set_bt"
-                            app:srcCompat="@drawable/vector_drawable_minus"
-                            />
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/icon_set_add" />
 
                         <EditText
                             android:id="@+id/et_time"
                             style="@style/set_et"
-                            android:text="5"/>
+                            android:text="5"
+                            android:textColor="@color/text_color_2" />
 
                         <ImageButton
                             android:id="@+id/bt_time_add"
-                            style="@style/set_bt"
-                            app:srcCompat="@drawable/vector_drawable_plus"
-                            />
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/icon_set_jian" />
                     </LinearLayout>
 
                     <TextView
                         style="@style/every_day_use_number"
                         android:text="@string/work_time_set"
-                        />
+                        android:textColor="@color/text_color_2" />
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
                 style="@style/set_ll"
-                android:visibility="gone"
-                >
+                android:visibility="gone">
 
-                <LinearLayout
-                    style="@style/set_ll_1">
+                <LinearLayout style="@style/set_ll_1">
 
-                    <LinearLayout
-                        style="@style/set_ll_2">
+                    <LinearLayout style="@style/set_ll_2">
 
                         <EditText
                             android:id="@+id/et_price"
                             style="@style/set_et"
                             android:layout_width="160dp"
-                            android:text="10"/>
+                            android:text="10" />
                     </LinearLayout>
 
                     <TextView
                         style="@style/every_day_use_number"
-                        android:text="@string/smoke_price"
-                        />
+                        android:text="@string/smoke_price" />
                 </LinearLayout>
 
-                <LinearLayout
-                    style="@style/set_ll_3">
+                <LinearLayout style="@style/set_ll_3">
 
-                    <RelativeLayout
-                        style="@style/set_ll_2">
+                    <RelativeLayout style="@style/set_ll_2">
 
                         <Spinner
                             android:id="@+id/spinner_money_select"
@@ -246,15 +334,12 @@
                             android:backgroundTint="@color/white_1"
                             android:dropDownHorizontalOffset="40dp"
                             android:dropDownVerticalOffset="30dp"
-                            android:popupBackground="@color/blue_1"
-                            >
-                        </Spinner>
+                            android:popupBackground="@color/blue_1"></Spinner>
                     </RelativeLayout>
 
                     <TextView
                         style="@style/every_day_use_number"
-                        android:text="@string/money_type"
-                        />
+                        android:text="@string/money_type" />
                 </LinearLayout>
             </LinearLayout>
             <!--<LinearLayout-->
@@ -306,14 +391,12 @@
                 android:layout_marginTop="30dp"
                 android:paddingEnd="100dp"
                 android:paddingStart="100dp"
-                android:visibility="visible"
-                >
+                android:visibility="visible">
 
                 <Button
                     android:id="@+id/btn_ota"
                     style="@style/bt_style"
-                    android:text="@string/ota"
-                    />
+                    android:text="@string/ota" />
             </LinearLayout>
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>

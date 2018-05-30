@@ -115,7 +115,7 @@ public class LoginActivity extends BaseActivity {
                         //存储用户账号信息
                         userRxPreferences.getString(MyConstants2.LOGIN_EMAIL).set(email);
                         PreferencesUtils.putEntity(mContext, user);
-                        startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                        startActivity(new Intent(LoginActivity.this, MainNewActivity.class));
                         LoginActivity.this.finish();
                     } else {
                         //邮箱未验证，提醒用户验证，同时判断账号更新时间，如果超过10分钟，则再次发送验证邮件

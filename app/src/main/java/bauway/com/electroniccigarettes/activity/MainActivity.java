@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -13,6 +15,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bestmafen.easeblelib.util.EaseUtils;
+import com.bestmafen.easeblelib.util.L;
 import com.bestmafen.smablelib.component.SimpleSmaCallback;
 import com.bestmafen.smablelib.component.SmaManager;
 import com.blankj.utilcode.util.AppUtils;
@@ -35,45 +38,45 @@ import cn.bmob.v3.BmobUser;
 
 public class MainActivity extends BaseActivity {
 
-    @BindView(R.id.imageView)
-    ImageView      mImageView;
-    @BindView(R.id.relativeLayout)
-    RelativeLayout mRelativeLayout;
+    //    @BindView(R.id.imageView)
+//    ImageView      mImageView;
+//    @BindView(R.id.relativeLayout)
+//    RelativeLayout mRelativeLayout;
     @BindView(R.id.bt_product_list)
-    Button         mBtProductList;
-    @BindView(R.id.bt_common_set)
-    Button         mBtCommonSet;
-    @BindView(R.id.bt_set)
-    Button         mBtSet;
-    @BindView(R.id.bt_evaluation)
-    Button         mBtEvaluation;
-    @BindView(R.id.bt_notification)
-    Button         mBtNotification;
-    @BindView(R.id.bt_info)
-    Button         mBtInfo;
-    @BindView(R.id.bt_user_number)
-    Button         mBtUserNumber;
-    @BindView(R.id.bt_concern_us)
-    Button         mBtConcernUs;
-    @BindView(R.id.relativeLayout3)
-    RelativeLayout mRelativeLayout3;
-    @BindView(R.id.main_linearLayout)
-    LinearLayout   mMainLinearLayout;
-    @BindView(R.id.bt_log_out)
-    Button         mBtLogOut;
-    @BindView(R.id.bt_unbind)
-    Button         mBtUnbind;
+    ImageView mBtProductList;
+    //    @BindView(R.id.bt_common_set)
+//    Button         mBtCommonSet;
+//    @BindView(R.id.bt_set)
+//    Button         mBtSet;
+//    @BindView(R.id.bt_evaluation)
+//    Button         mBtEvaluation;
+//    @BindView(R.id.bt_notification)
+//    Button         mBtNotification;
+//    @BindView(R.id.bt_info)
+//    Button         mBtInfo;
+//    @BindView(R.id.bt_user_number)
+//    Button         mBtUserNumber;
+//    @BindView(R.id.bt_concern_us)
+//    Button         mBtConcernUs;
+//    @BindView(R.id.relativeLayout3)
+//    RelativeLayout mRelativeLayout3;
+//    @BindView(R.id.main_linearLayout)
+//    LinearLayout   mMainLinearLayout;
+//    @BindView(R.id.bt_log_out)
+//    Button         mBtLogOut;
+//    @BindView(R.id.bt_unbind)
+//    Button         mBtUnbind;
     @BindView(R.id.tv_app_version)
-    TextView       mTvAppVersion;
+    TextView mTvAppVersion;
 
     private SmaManager mSmaManager;
     //    private DebugViewManager mDebugViewManager;
-    private TextView   mTvDebug;
+    private TextView mTvDebug;
     private DateFormat mDateFormat = new SimpleDateFormat("HH:mm:ss");
 
     @Override
     protected int getLayoutRes() {
-        return R.layout.activity_main;
+        return R.layout.activity_main_new;
     }
 
     @Override
@@ -97,7 +100,11 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-
+        Window window = getWindow();
+        //取消设置透明状态栏,使 ContentView 内容不再覆盖状态栏
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        //需要设置这个 flag 才能调用 setStatusBarColor 来设置状态栏颜色
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
     }
 
     @Override
@@ -134,8 +141,8 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        mBtUnbind.setVisibility(TextUtils.isEmpty(mSmaManager.getNameAndAddress()[0]) ? View.GONE :
-                View.VISIBLE);
+//        mBtUnbind.setVisibility(TextUtils.isEmpty(mSmaManager.getNameAndAddress()[0]) && TextUtils.isEmpty(mSmaManager.getNameAndAddress()[1]) ? View.GONE :
+//                View.VISIBLE);
     }
 
     @Override
@@ -144,63 +151,64 @@ public class MainActivity extends BaseActivity {
         super.onDestroy();
     }
 
-    @OnClick({R.id.bt_product_list, R.id.bt_common_set, R.id.bt_set,
-            R.id.bt_evaluation, R.id.bt_notification, R.id.bt_info,
-            R.id.bt_user_number, R.id.bt_concern_us, R.id.bt_log_out,
-            R.id.bt_unbind})
+    //    @OnClick({R.id.bt_product_list, R.id.bt_common_set, R.id.bt_set,
+//            R.id.bt_evaluation, R.id.bt_notification, R.id.bt_info,
+//            R.id.bt_user_number, R.id.bt_concern_us, R.id.bt_log_out,
+//            R.id.bt_unbind})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.bt_product_list:
-                if (!TextUtils.isEmpty(SmaManager.getInstance().getNameAndAddress()[1])) {
-                    ToastUtils.showShort(R.string.already_bind);
-                    return;
-                }
-                startActivity(new Intent(this, ProductSelectActivity.class));
-                break;
-            case R.id.bt_common_set:
-                startActivity(new Intent(this, CommonSetActivity.class));
-                break;
-            case R.id.bt_set:
-                startActivity(new Intent(this, SetActivity.class));
-                break;
-            case R.id.bt_evaluation:
-                startActivity(new Intent(this, EvaluationActivity.class));
-                break;
-            case R.id.bt_notification:
-                startActivity(new Intent(this, NotificationActivity.class));
-                break;
-            case R.id.bt_info:
-                startActivity(new Intent(this, NotesActivity.class));
-                break;
-            case R.id.bt_user_number:
-                startActivity(new Intent(this, UserUseNumberActivity.class));
-                break;
-            case R.id.bt_concern_us:
-                startActivity(new Intent(this, ConcernUsActivity.class));
-                break;
-            case R.id.bt_log_out:
-                DialogUtil.defaultDialog(mContext, getString(R.string.confirm_log_out_app), null, null, new
-                        DialogCallback() {
-
-                            @Override
-                            public void execute(Object dialog, Object content) {
-                                //确认退出
-                                exitApp();
-                            }
-                        });
-                break;
-            case R.id.bt_unbind:
-                DialogUtil.defaultDialog(mContext, getString(R.string.confirm_unbind_device), null, null, new
-                        DialogCallback() {
-
-                            @Override
-                            public void execute(Object dialog, Object content) {
-                                //确认解绑
-                                SmaManager.getInstance().unbind();
-                                mBtUnbind.setVisibility(View.GONE);
-                            }
-                        });
-                break;
+//            case R.id.bt_product_list:
+//                L.e("bt_product_list",SmaManager.getInstance().getNameAndAddress()[1]);
+//                if (!TextUtils.isEmpty(SmaManager.getInstance().getNameAndAddress()[1])) {
+//                    ToastUtils.showShort(R.string.already_bind);
+//                    return;
+//                }
+//                startActivity(new Intent(this, ProductSelectActivity.class));
+//                break;
+//            case R.id.bt_common_set:
+//                startActivity(new Intent(this, CommonSetActivity.class));
+//                break;
+//            case R.id.bt_set:
+//                startActivity(new Intent(this, SetActivity.class));
+//                break;
+//            case R.id.bt_evaluation:
+//                startActivity(new Intent(this, EvaluationActivity.class));
+//                break;
+//            case R.id.bt_notification:
+//                startActivity(new Intent(this, NotificationActivity.class));
+//                break;
+//            case R.id.bt_info:
+//                startActivity(new Intent(this, NotesActivity.class));
+//                break;
+//            case R.id.bt_user_number:
+//                startActivity(new Intent(this, UserUseNumberActivity.class));
+//                break;
+//            case R.id.bt_concern_us:
+//                startActivity(new Intent(this, ConcernUsActivity.class));
+//                break;
+//            case R.id.bt_log_out:
+//                DialogUtil.defaultDialog(mContext, getString(R.string.confirm_log_out_app), null, null, new
+//                        DialogCallback() {
+//
+//                            @Override
+//                            public void execute(Object dialog, Object content) {
+//                                //确认退出
+//                                exitApp();
+//                            }
+//                        });
+//                break;
+//            case R.id.bt_unbind:
+//                DialogUtil.defaultDialog(mContext, getString(R.string.confirm_unbind_device), null, null, new
+//                        DialogCallback() {
+//
+//                            @Override
+//                            public void execute(Object dialog, Object content) {
+//                                //确认解绑
+//                                SmaManager.getInstance().unbind();
+//                                mBtUnbind.setVisibility(View.GONE);
+//                            }
+//                        });
+//                break;
         }
     }
 

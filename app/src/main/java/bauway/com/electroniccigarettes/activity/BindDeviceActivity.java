@@ -131,7 +131,7 @@ public class BindDeviceActivity extends BaseActivity {
                 if (!isFailed && isConnected) {
                     mSmaManager.setNameAndAddress(device.getName(), device.getAddress());
                     mSmaManager.mEaseConnector.setAddress(device.getAddress());
-                    startActivity(new Intent(mContext, MainActivity.class));
+                    startActivity(new Intent(mContext, MainNewActivity.class));
                     finish();
                 }
             }

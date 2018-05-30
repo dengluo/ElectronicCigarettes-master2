@@ -4,8 +4,8 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -28,22 +28,19 @@ import butterknife.OnClick;
  * 提醒
  */
 public class NotificationActivity extends BaseActivity {
-    @BindView(R.id.imageView)
-    ImageView mImageView;
-    @BindView(R.id.relativeLayout)
-    RelativeLayout mRelativeLayout;
-    @BindView(R.id.bt_return_1)
-    ImageButton mBtReturn1;
+
+    @BindView(R.id.action_back)
+    ImageView mBtReturn1;
     @BindView(R.id.relativeLayout1)
     RelativeLayout mRelativeLayout1;
     @BindView(R.id.show_rl_loe_power_warning)
-    RelativeLayout mShowRlLoePowerWarning;
+    LinearLayout mShowRlLoePowerWarning;
     @BindView(R.id.show_rl_is_need_charge)
-    RelativeLayout mShowRlIsNeedCharge;
+    LinearLayout mShowRlIsNeedCharge;
     @BindView(R.id.show_rl_is_need_clean)
-    RelativeLayout mShowRlIsNeedClean;
+    LinearLayout mShowRlIsNeedClean;
     @BindView(R.id.show_rl_is_need_charge_maintenance)
-    RelativeLayout mShowRlIsNeedChargeMaintenance;
+    LinearLayout mShowRlIsNeedChargeMaintenance;
     @BindView(R.id.tv_surplus_num)
     TextView mTvSurplusNum;
     @BindView(R.id.show_rl_is_surplus_warning)
@@ -132,10 +129,10 @@ public class NotificationActivity extends BaseActivity {
         }
     }
 
-    @OnClick({R.id.bt_return_1, R.id.show_rl_is_need_clean, R.id.show_rl_is_need_charge_maintenance})
+    @OnClick({R.id.action_back, R.id.show_rl_is_need_clean, R.id.show_rl_is_need_charge_maintenance})
     public void onViewClicked(View v) {
         switch (v.getId()) {
-            case R.id.bt_return_1:
+            case R.id.action_back:
                 finish();
                 break;
             case R.id.show_rl_is_need_clean:

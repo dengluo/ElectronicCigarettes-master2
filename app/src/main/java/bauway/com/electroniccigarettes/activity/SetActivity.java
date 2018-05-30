@@ -34,12 +34,8 @@ import butterknife.OnClick;
 
 public class SetActivity extends BaseActivity {
 
-    @BindView(R.id.imageView)
-    ImageView mImageView;
-    @BindView(R.id.relativeLayout)
-    RelativeLayout mRelativeLayout;
-    @BindView(R.id.bt_return_1)
-    ImageButton mBtReturn1;
+    @BindView(R.id.action_back)
+    ImageView mBtReturn1;
     @BindView(R.id.relativeLayout1)
     RelativeLayout mRelativeLayout1;
     @BindView(R.id.bt_user_number_subtract)
@@ -72,12 +68,8 @@ public class SetActivity extends BaseActivity {
     EditText mEtPrice;
     @BindView(R.id.spinner_money_select)
     Spinner mSpinnerMoneySelect;
-    @BindView(R.id.bt_off)
-    TextView mBtOff;
     @BindView(R.id.bt_switch_shake)
     SwitchCompat mBtSwitchShake;
-    @BindView(R.id.bt_on)
-    TextView mBtOn;
 //    @BindView(R.id.bt_save_set)
 //    Button mBtSaveSet;
     @BindView(R.id.main_content)
@@ -337,13 +329,13 @@ public class SetActivity extends BaseActivity {
         mSmaManager = SmaManager.getInstance();
     }
 
-    @OnClick({R.id.bt_return_1, R.id.bt_user_number_subtract, R.id.bt_user_number_add,
+    @OnClick({R.id.action_back, R.id.bt_user_number_subtract, R.id.bt_user_number_add,
             R.id.bt_loop_number_subtract, R.id.bt_loop_number_add, R.id.bt_temp_subtract,
             R.id.bt_temp_add, R.id.bt_time_subtract, R.id.bt_time_add, /*R.id.bt_save_set,*/
-            R.id.bt_off, R.id.bt_on, R.id.btn_ota})
+            R.id.btn_ota})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.bt_return_1:
+            case R.id.action_back:
                 this.finish();
                 break;
             case R.id.bt_user_number_subtract:
@@ -434,14 +426,6 @@ public class SetActivity extends BaseActivity {
                     mDurationPerLoop += 5;
                     mEtTime.setText(String.valueOf(mDurationPerLoop));
                 }
-                break;
-            case R.id.bt_off:
-                mBtSwitchShake.setChecked(false);
-                userRxPreferences.getBoolean(MyConstants2.SP_IS_VIBRATION_ENABLED).set(false);
-                break;
-            case R.id.bt_on:
-                userRxPreferences.getBoolean(MyConstants2.SP_IS_VIBRATION_ENABLED).set(true);
-                mBtSwitchShake.setChecked(true);
                 break;
             case R.id.btn_ota:
                 if (!mSmaManager.isConnected) {

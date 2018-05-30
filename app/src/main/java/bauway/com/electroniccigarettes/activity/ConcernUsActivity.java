@@ -4,7 +4,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import bauway.com.electroniccigarettes.R;
@@ -18,20 +20,16 @@ import butterknife.OnClick;
  */
 
 public class ConcernUsActivity extends BaseActivity {
-    @BindView(R.id.bt_return)
-    ImageButton mBtReturn;
-    @BindView(R.id.tv_company_name)
-    TextView mTvCompanyName;
-    @BindView(R.id.linearLayout)
-    LinearLayout mLinearLayout;
-    @BindView(R.id.bt_youtube)
-    Button mBtYoutube;
-    @BindView(R.id.bt_instagram)
-    Button mBtInstagram;
-    @BindView(R.id.bt_facebook)
-    Button mBtFacebook;
-    @BindView(R.id.bt_twitter)
-    Button mBtTwitter;
+    @BindView(R.id.action_back)
+    ImageView action_back;
+    @BindView(R.id.rl_concern_us1)
+    RelativeLayout rl_concern_us1;
+    @BindView(R.id.rl_concern_us2)
+    RelativeLayout rl_concern_us2;
+    @BindView(R.id.rl_concern_us3)
+    RelativeLayout rl_concern_us3;
+    @BindView(R.id.rl_concern_us4)
+    RelativeLayout rl_concern_us4;
 
     @Override
     protected int getLayoutRes() {
@@ -64,22 +62,22 @@ public class ConcernUsActivity extends BaseActivity {
     }
 
 
-    @OnClick({R.id.bt_return, R.id.bt_youtube, R.id.bt_instagram, R.id.bt_facebook, R.id.bt_twitter})
+    @OnClick({R.id.action_back, R.id.rl_concern_us1, R.id.rl_concern_us2, R.id.rl_concern_us3, R.id.rl_concern_us4})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.bt_return:
+            case R.id.action_back:
                 this.finish();
                 break;
-            case R.id.bt_youtube:
+            case R.id.rl_concern_us1:
                 jumpWeb("https://www.youtube.com/c/zhounicociggo");
                 break;
-            case R.id.bt_instagram:
+            case R.id.rl_concern_us4:
                 jumpWeb("https://www.instagram.com/herbstick/");
                 break;
-            case R.id.bt_facebook:
+            case R.id.rl_concern_us2:
                 jumpWeb("https://www.facebook.com/bauway.ecigarette");
                 break;
-            case R.id.bt_twitter:
+            case R.id.rl_concern_us3:
                 jumpWeb("https://twitter.com/Herbstick");
                 break;
         }
