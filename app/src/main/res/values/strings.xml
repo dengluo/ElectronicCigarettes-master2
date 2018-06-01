@@ -14,7 +14,7 @@
     <string name="yesterday">昨天%tR</string>
     <string name="mill" translatable="false">%tc</string>
 
-    <string name="login">登入</string>
+    <string name="login">登录</string>
     <string name="register">注册</string>
     <string name="forget_pwd">忘记密码？</string>
     <string name="plz_input_email">请输入邮箱</string>

@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.blankj.utilcode.util.AppUtils;
 import com.blankj.utilcode.util.LogUtils;
@@ -36,8 +37,8 @@ public class RegisterActivity extends BaseActivity {
     EditText mEtRegisterPwdAgain;
     @BindView(R.id.bt_register)
     Button mBtRegister;
-    @BindView(R.id.bt_return)
-    ImageButton mBtReturn;
+    @BindView(R.id.action_back)
+    ImageView action_back;
 
     @Override
     protected int getLayoutRes() {
@@ -74,10 +75,10 @@ public class RegisterActivity extends BaseActivity {
     }
 
 
-    @OnClick({R.id.bt_return, R.id.bt_register})
+    @OnClick({R.id.action_back, R.id.bt_register})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.bt_return:
+            case R.id.action_back:
                 this.finish();
                 break;
             case R.id.bt_register:

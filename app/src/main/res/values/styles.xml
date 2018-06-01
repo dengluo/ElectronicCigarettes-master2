@@ -193,7 +193,7 @@
         <item name="android:background">@null</item>
         <item name="android:inputType">textEmailAddress</item>
         <item name="android:maxLines">1</item>
-        <item name="android:textColor">@color/white_1</item>
+        <item name="android:textColor">@color/text_color_2</item>
         <item name="android:textColorHint">@color/blue_1</item>
     </style>
 
@@ -216,7 +216,7 @@
         <item name="android:background">@null</item>
         <item name="android:inputType">textPassword</item>
         <item name="android:maxLines">1</item>
-        <item name="android:textColor">@color/white_1</item>
+        <item name="android:textColor">@color/text_color_2</item>
         <item name="android:textColorHint">@color/blue_1</item>
     </style>
 
@@ -395,7 +395,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:background">@null</item>
-        <item name="android:textColor">@color/white_1</item>
+        <item name="android:textColor">@color/text_color_2</item>
     </style>
 
 

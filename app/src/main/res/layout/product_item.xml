@@ -3,7 +3,7 @@
               android:id="@+id/bt_product_item"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:background="@color/black_1"
+              android:background="@color/white_1"
               android:gravity="center"
               android:orientation="vertical"
               android:padding="10dp"
@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="产品名"
-        android:textColor="@color/white_2"
+        android:textColor="@color/text_color_2"
         />
 
 </LinearLayout>

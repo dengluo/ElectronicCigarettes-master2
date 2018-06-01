@@ -29,15 +29,12 @@ import butterknife.OnClick;
 
 public class ProductSelectActivity extends BaseActivity {
 
-
     @BindView(R.id.recycle_view)
     RecyclerView mRecycleView;
-    @BindView(R.id.imageView)
-    ImageView mImageView;
     @BindView(R.id.relativeLayout)
     RelativeLayout mRelativeLayout;
-    @BindView(R.id.bt_return_1)
-    ImageButton mBtReturn1;
+    @BindView(R.id.action_back)
+    ImageView action_back;
 
     private ProductListAdapter productListAdapter;
 
@@ -95,7 +92,7 @@ public class ProductSelectActivity extends BaseActivity {
     }
 
 
-    @OnClick(R.id.bt_return_1)
+    @OnClick(R.id.action_back)
     public void onViewClicked() {
         this.finish();
     }

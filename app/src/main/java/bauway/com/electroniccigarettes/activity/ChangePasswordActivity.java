@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.blankj.utilcode.util.LogUtils;
@@ -29,22 +30,14 @@ import cn.bmob.v3.listener.UpdateListener;
 
 public class ChangePasswordActivity extends BaseActivity {
 
-    @BindView(R.id.bt_return)
-    ImageButton mBtReturn;
-    @BindView(R.id.relativeLayout4)
-    RelativeLayout mRelativeLayout4;
+    @BindView(R.id.action_back)
+    ImageView action_back;
     @BindView(R.id.et_old_pwd)
     EditText mEtOldPwd;
-    @BindView(R.id.textInputLayout)
-    TextInputLayout mTextInputLayout;
     @BindView(R.id.et_new_pwd)
     EditText mEtNewPwd;
-    @BindView(R.id.textInputLayout1)
-    TextInputLayout mTextInputLayout1;
     @BindView(R.id.et_new_pwd_again)
     EditText mEtNewPwdAgain;
-    @BindView(R.id.textInputLayout2)
-    TextInputLayout mTextInputLayout2;
     @BindView(R.id.bt_confirm)
     Button mBtConfirm;
 
@@ -79,10 +72,10 @@ public class ChangePasswordActivity extends BaseActivity {
     }
 
 
-    @OnClick({R.id.bt_return, R.id.bt_confirm})
+    @OnClick({R.id.action_back, R.id.bt_confirm})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.bt_return:
+            case R.id.action_back:
                 this.finish();
                 break;
             case R.id.bt_confirm:

@@ -6,6 +6,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -21,22 +22,16 @@ import butterknife.OnClick;
  */
 
 public class AppUserInfoActivity extends BaseActivity {
-    @BindView(R.id.bt_return)
-    ImageButton mBtReturn;
-    @BindView(R.id.relativeLayout4)
-    RelativeLayout mRelativeLayout4;
+    @BindView(R.id.action_back)
+    ImageView action_back;
     @BindView(R.id.textView2)
     TextView mTextView2;
     @BindView(R.id.tv_user_email)
     TextView mTvUserEmail;
-    @BindView(R.id.view)
-    View mView;
     @BindView(R.id.textView3)
     TextView mTextView3;
     @BindView(R.id.tv_product_name)
     TextView mTvProductName;
-    @BindView(R.id.view2)
-    View mView2;
     @BindView(R.id.bt_change_pwd)
     Button mBtChangePwd;
 
@@ -82,10 +77,10 @@ public class AppUserInfoActivity extends BaseActivity {
 
     }
 
-    @OnClick({R.id.bt_return, R.id.bt_change_pwd})
+    @OnClick({R.id.action_back, R.id.bt_change_pwd})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.bt_return:
+            case R.id.action_back:
                 this.finish();
                 break;
             case R.id.bt_change_pwd:
