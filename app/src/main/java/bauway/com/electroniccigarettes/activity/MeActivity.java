@@ -61,6 +61,8 @@ public class MeActivity extends BaseActivity {
     LinearLayout ll_me_concern_us;
     @BindView(R.id.ll_me_unbind_device)
     LinearLayout ll_me_unbind_device;
+    @BindView(R.id.ll_me_ota)
+    LinearLayout ll_me_ota;
 
     private SmaManager mSmaManager;
     private DateFormat mDateFormat = new SimpleDateFormat("HH:mm:ss");
@@ -193,7 +195,7 @@ public class MeActivity extends BaseActivity {
         super.onDestroy();
     }
 
-    @OnClick({R.id.action_back, R.id.ll_me_evaluate, R.id.ll_me_notes, R.id.ll_me_concern_us, R.id.ll_me_unbind_device, R.id.iv_cancel})
+    @OnClick({R.id.action_back, R.id.ll_me_evaluate, R.id.ll_me_notes, R.id.ll_me_concern_us, R.id.ll_me_unbind_device, R.id.ll_me_ota, R.id.iv_cancel})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.action_back:
@@ -219,6 +221,13 @@ public class MeActivity extends BaseActivity {
                                 ll_me_unbind_device.setVisibility(View.GONE);
                             }
                         });
+                break;
+            case R.id.ll_me_ota:
+                if (!mSmaManager.isConnected) {
+                    ToastUtils.showShortSafe(R.string.device_not_connected);
+                    return;
+                }
+                mSmaManager.write(SmaManager.SET.INTO_OTA);
                 break;
             case R.id.iv_cancel:
                 DialogUtil.defaultDialog(mContext, getString(R.string.confirm_log_out_app), null, null, new

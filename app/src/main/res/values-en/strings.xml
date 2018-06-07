@@ -36,6 +36,7 @@
     <string name="have_clean">Have been cleaned?</string>
     <string name="hk">HKD</string>
     <string name="just_now">just now</string>
+    <string name="index">Index</string>
     <string name="loading">Loading...</string>
     <string name="log_out">Log out</string>
     <string name="login_now">Login now</string>
@@ -91,6 +92,10 @@
     <string name="register_success_plz_check_email">Registered successfully.please check your email.</string>
     <string name="reset_password">Reset password</string>
     <string name="rmb">RMB</string>
+    <string name="youtube">Youtube</string>
+    <string name="facebook">Facebook</string>
+    <string name="twitter">Twitter</string>
+    <string name="instagram">Instagram</string>
     <string name="save">Money Saved</string>
     <string name="search">Search</string>
     <string name="search_again">Search again</string>
@@ -102,6 +107,7 @@
     <string name="send_feedback_msg_success">Thanks for your feedback.We will take your advice.</string>
     <string name="send_reset_pwd_info">Sending reset request</string>
     <string name="set">Setting</string>
+    <string name="me">Me</string>
     <string name="shake">Vibration</string>
     <string name="smoke_price">Price for a pack cigarette</string>
     <string name="surplus_num">"Remaining puff "</string>

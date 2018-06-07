@@ -174,27 +174,27 @@
                         android:gravity="center">
 
                         <ImageButton
-                            android:id="@+id/bt_loop_number_subtract"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/icon_set_add" />
-
-                        <EditText
-                            android:id="@+id/et_set_loop_number_plan"
-                            style="@style/set_et"
-                            android:text="15"
-                            android:textColor="@color/text_color_2" />
-
-                        <ImageButton
-                            android:id="@+id/bt_loop_number_add"
+                            android:id="@+id/bt_temp_subtract"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@drawable/icon_set_jian" />
+
+                        <EditText
+                            android:id="@+id/et_temp"
+                            style="@style/set_et"
+                            android:text="225"
+                            android:textColor="@color/text_color_2" />
+
+                        <ImageButton
+                            android:id="@+id/bt_temp_add"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/icon_set_add" />
                     </LinearLayout>
 
                     <TextView
                         style="@style/every_day_use_number"
-                        android:text="@string/loop_use_num_plan"
+                        android:text="@string/temp_set"
                         android:textColor="@color/text_color_2" />
                 </LinearLayout>
             </LinearLayout>
@@ -226,19 +226,19 @@
                         android:gravity="center">
 
                         <ImageButton
-                            android:id="@+id/bt_temp_subtract"
+                            android:id="@+id/bt_loop_number_subtract"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@drawable/icon_set_jian" />
 
                         <EditText
-                            android:id="@+id/et_temp"
+                            android:id="@+id/et_set_loop_number_plan"
                             style="@style/set_et"
-                            android:text="225"
+                            android:text="15"
                             android:textColor="@color/text_color_2" />
 
                         <ImageButton
-                            android:id="@+id/bt_temp_add"
+                            android:id="@+id/bt_loop_number_add"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@drawable/icon_set_add" />
@@ -246,7 +246,7 @@
 
                     <TextView
                         style="@style/every_day_use_number"
-                        android:text="@string/temp_set"
+                        android:text="@string/loop_use_num_plan"
                         android:textColor="@color/text_color_2" />
                 </LinearLayout>
 
@@ -279,7 +279,7 @@
                             android:id="@+id/bt_time_subtract"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/icon_set_add" />
+                            android:background="@drawable/icon_set_jian" />
 
                         <EditText
                             android:id="@+id/et_time"
@@ -291,7 +291,7 @@
                             android:id="@+id/bt_time_add"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/icon_set_jian" />
+                            android:background="@drawable/icon_set_add" />
                     </LinearLayout>
 
                     <TextView
@@ -396,6 +396,7 @@
                 <Button
                     android:id="@+id/btn_ota"
                     style="@style/bt_style"
+                    android:visibility="gone"
                     android:text="@string/ota" />
             </LinearLayout>
         </LinearLayout>

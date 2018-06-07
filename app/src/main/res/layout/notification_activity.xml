@@ -165,14 +165,6 @@
                         android:textColor="@color/text_color_2" />
                 </LinearLayout>
 
-                <View
-                    android:layout_width="1dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@color/blue_1" />
-
                 <LinearLayout
                     android:id="@+id/show_rl_is_need_charge_maintenance"
                     android:layout_width="0dp"

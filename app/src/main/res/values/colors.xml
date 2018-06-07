@@ -24,6 +24,7 @@
     <color name="text_color_6">#eeeeee</color>
     <color name="sayes_txt_me_line">#c0fff2</color> <!-- 个人中心分割线 -->
     <color name="black_trans10">#1a000000</color>
+    <color name="notification_red">#FFB5C5</color>
 
 
 </resources>
