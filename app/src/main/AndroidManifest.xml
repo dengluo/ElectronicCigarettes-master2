@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="bauway.com.electroniccigarettes">
+    package="bauway.com.electroniccigarettes">
     <!--允许联网 -->
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <!--获取GSM（2g）、WCDMA（联通3g）等网络状态的信息  -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <!--获取wifi网络状态的信息 -->
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <!--保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
     <!--获取sd卡写的权限，用于文件上传和下载-->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <!--允许读取手机状态 用于创建BmobInstallation-->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
 
     <application
         android:name=".MyApplication"
@@ -24,35 +24,67 @@
         android:theme="@style/NoTitleFullscreen">
         <activity
             android:name=".activity.LauncherActivity"
-            >
+            android:screenOrientation="portrait">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".activity.MainActivity"
             android:launchMode="singleTask"
-            />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activity.MainNewActivity"
             android:launchMode="singleTask"
-            />
-        <activity android:name=".activity.RegisterActivity"/>
-        <activity android:name=".activity.ForgetPasswordActivity"/>
-        <activity android:name=".activity.LoginActivity"/>
-        <activity android:name=".activity.BindDeviceActivity"/>
-        <activity android:name=".activity.ProductSelectActivity"/>
-        <activity android:name=".activity.CommonSetActivity"/>
-        <activity android:name=".activity.CommonSetNewActivity"/>
-        <activity android:name=".activity.ConcernUsActivity"/>
-        <activity android:name=".activity.EvaluationActivity"/>
-        <activity android:name=".activity.UserUseNumberActivity"/>
-        <activity android:name=".activity.SetActivity"/>
-        <activity android:name=".activity.MeActivity"/>
-        <activity android:name=".activity.NotificationActivity"/>
-        <activity android:name=".activity.NotesActivity"/>
-        <activity android:name=".activity.AppUserInfoActivity"/>
-        <activity android:name=".activity.ChangePasswordActivity"/>
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ForgetPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.BindDeviceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ProductSelectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CommonSetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CommonSetNewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ConcernUsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.EvaluationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.UserUseNumberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.NotificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.NotesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AppUserInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChangePasswordActivity"
+            android:screenOrientation="portrait" />
     </application>
 </manifest>
