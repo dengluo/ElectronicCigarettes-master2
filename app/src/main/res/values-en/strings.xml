@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">CigGo FyHit</string>
     <string name="login">Login</string>
     <string name="email">Email</string>
     <string name="register">Register</string>
@@ -126,4 +127,11 @@
     <string name="work_time_set">Working time for a session</string>
     <string name="yesterday">yesterday%tR</string>
     <string name="ota">Firmware upgrade</string>
+    <string name="v" translatable="false">V</string>
+    <string name="t" translatable="false">T</string>
+    <string name="h" translatable="false">H</string>
+    <string name="temp_unit" translatable="false">℃</string>
+    <string name="p" translatable="false">P</string>
+    <string name="m" translatable="false">M</string>
+    <string name="s" translatable="false">S</string>
 </resources>

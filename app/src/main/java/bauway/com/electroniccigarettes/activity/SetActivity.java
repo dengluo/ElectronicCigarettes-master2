@@ -1,5 +1,6 @@
 package bauway.com.electroniccigarettes.activity;
 
+import android.bluetooth.BluetoothDevice;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.SwitchCompat;
@@ -16,6 +17,8 @@ import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.bestmafen.smablelib.component.SimpleSmaCallback;
+import com.bestmafen.smablelib.component.SmaCallback;
 import com.bestmafen.smablelib.component.SmaManager;
 import com.blankj.utilcode.util.ToastUtils;
 
@@ -87,6 +90,7 @@ public class SetActivity extends BaseActivity {
 //    private boolean isVibrationEnabled;
 
     private SmaManager mSmaManager;
+    private SmaCallback mSmaCallback;
 
     @Override
     protected int getLayoutRes() {
@@ -325,8 +329,76 @@ public class SetActivity extends BaseActivity {
     }
 
     @Override
+    protected void onDestroy() {
+        mSmaManager.removeSmaCallback(mSmaCallback);
+        super.onDestroy();
+    }
+
+    @Override
     protected void init(Bundle savedInstanceState) {
-        mSmaManager = SmaManager.getInstance();
+        mSmaManager = SmaManager.getInstance().addSmaCallback(mSmaCallback = new SimpleSmaCallback() {
+
+            @Override
+            public void onConnected(BluetoothDevice device, boolean isConnected) {
+
+            }
+
+            @Override
+            public void onReadVoltage(final float voltage) {
+                runOnUiThread(new Runnable() {
+
+                    @Override
+                    public void run() {
+//                        mTvDcv.setText(String.valueOf(voltage));
+                    }
+                });
+            }
+
+            @Override
+            public void onCharging(final float voltage) {
+                runOnUiThread(new Runnable() {
+
+                    @Override
+                    public void run() {
+//                        mTvDcv.setText(String.valueOf(voltage));
+//                        updateChargeTime();
+                    }
+                });
+            }
+
+            @Override
+            public void onReadTemperature(final int temperature) {
+                runOnUiThread(new Runnable() {
+
+                    @Override
+                    public void run() {
+//                        mTvTemp.setText(String.valueOf(temperature));
+                    }
+                });
+            }
+
+            @Override
+            public void onReadPuffCount(final int puff) {
+                runOnUiThread(new Runnable() {
+
+                    @Override
+                    public void run() {
+//                        mTvUseNum.setText(String.valueOf(puff));
+                    }
+                });
+            }
+
+            @Override
+            public void onReadChargeCount(final int count) {
+                runOnUiThread(new Runnable() {
+
+                    @Override
+                    public void run() {
+//                        mTvChargeCount.setText(String.valueOf(count));
+                    }
+                });
+            }
+        });
     }
 
     @OnClick({R.id.action_back, R.id.bt_user_number_subtract, R.id.bt_user_number_add,

@@ -143,33 +143,69 @@ public class MeActivity extends BaseActivity {
 
     @Override
     protected void init(Bundle savedInstanceState) {
-        mSmaManager = SmaManager.getInstance().init(this).addSmaCallback(new SimpleSmaCallback() {
+        mSmaManager = SmaManager.getInstance().addSmaCallback(mSmaCallback = new SimpleSmaCallback() {
 
             @Override
             public void onConnected(BluetoothDevice device, boolean isConnected) {
-                if (BuildConfig.DEBUG) {
-                    append("  ->  isConnected " + isConnected);
-                }
+
             }
 
             @Override
-            public void onWrite(byte[] data) {
-                if (BuildConfig.DEBUG) {
-                    append("  ->  onWrite", data);
-                }
+            public void onReadVoltage(final float voltage) {
+                runOnUiThread(new Runnable() {
+
+                    @Override
+                    public void run() {
+//                        mTvDcv.setText(String.valueOf(voltage));
+                    }
+                });
             }
 
             @Override
-            public void onRead(byte[] data) {
-                if (BuildConfig.DEBUG) {
-                    append("  ->  onRead", data);
-                }
+            public void onCharging(final float voltage) {
+                runOnUiThread(new Runnable() {
+
+                    @Override
+                    public void run() {
+//                        mTvDcv.setText(String.valueOf(voltage));
+//                        updateChargeTime();
+                    }
+                });
+            }
+
+            @Override
+            public void onReadTemperature(final int temperature) {
+                runOnUiThread(new Runnable() {
+
+                    @Override
+                    public void run() {
+//                        mTvTemp.setText(String.valueOf(temperature));
+                    }
+                });
+            }
+
+            @Override
+            public void onReadPuffCount(final int puff) {
+                runOnUiThread(new Runnable() {
+
+                    @Override
+                    public void run() {
+//                        mTvUseNum.setText(String.valueOf(puff));
+                    }
+                });
+            }
+
+            @Override
+            public void onReadChargeCount(final int count) {
+                runOnUiThread(new Runnable() {
+
+                    @Override
+                    public void run() {
+//                        mTvChargeCount.setText(String.valueOf(count));
+                    }
+                });
             }
         });
-        mSmaManager.connect(true);
-        if (BuildConfig.DEBUG) {
-//            mDebugViewManager = new DebugViewManager(this);
-        }
     }
 
     private void exitApp() {
@@ -190,8 +226,9 @@ public class MeActivity extends BaseActivity {
 
     @Override
     protected void onDestroy() {
-        SmaManager.getInstance().unbind();
-        ll_me_unbind_device.setVisibility(View.GONE);
+        mSmaManager.removeSmaCallback(mSmaCallback);
+//        SmaManager.getInstance().unbind();
+//        ll_me_unbind_device.setVisibility(View.GONE);
         super.onDestroy();
     }
 

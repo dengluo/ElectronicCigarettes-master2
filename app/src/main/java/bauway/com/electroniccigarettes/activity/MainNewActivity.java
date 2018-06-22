@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bestmafen.easeblelib.util.EaseUtils;
@@ -38,17 +39,17 @@ public class MainNewActivity extends BaseActivity {
 //    @BindView(R.id.relativeLayout)
 //    RelativeLayout mRelativeLayout;
     @BindView(R.id.iv_product_list)
-    ImageView iv_product_list;
+    LinearLayout iv_product_list;
     @BindView(R.id.iv_common_set)
-    ImageView iv_common_set;
+    LinearLayout iv_common_set;
     @BindView(R.id.iv_set)
-    ImageView iv_set;
+    LinearLayout iv_set;
     @BindView(R.id.iv_me)
-    ImageView iv_me;
+    LinearLayout iv_me;
     //    @BindView(R.id.bt_evaluation)
 //    Button         mBtEvaluation;
     @BindView(R.id.iv_notification)
-    ImageView mBtNotification;
+    LinearLayout mBtNotification;
     //    @BindView(R.id.bt_info)
 //    Button         mBtInfo;
 //    @BindView(R.id.bt_user_number)
