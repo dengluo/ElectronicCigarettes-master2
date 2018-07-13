@@ -17,7 +17,7 @@
             android:id="@+id/iv_tab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/selector_more_tab"/>
+            android:src="@drawable/selector_more_tab" />
 
         <TextView
             android:id="@+id/tv_tab"

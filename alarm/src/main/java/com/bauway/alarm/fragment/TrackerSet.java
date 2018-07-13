@@ -106,7 +106,13 @@ public class TrackerSet extends BaseFragment {
         mNumPickerHourUnit.setMinValue(0);
         mNumPickerHourUnit.setWrapSelectorWheel(false);
 
-        hourMinutes = Tools.getHourMinutes();
+        Log.e("mNumPickerHour.getValue",mNumPickerHour.getValue()+"");
+
+        if (mNumPickerHour.getValue()==0){
+            hourMinutes = Tools.getHourMinutes();
+        }else{
+            hourMinutes = Tools.getHourMinutes2();
+        }
         mNumPickerMin.setDescendantFocusability(NumberPicker.FOCUS_BLOCK_DESCENDANTS);
         mNumPickerMin.setDisplayedValues(hourMinutes);
         mNumPickerMin.setMinValue(0);

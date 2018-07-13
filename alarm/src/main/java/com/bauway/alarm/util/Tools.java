@@ -73,6 +73,26 @@ public class Tools {
         return hourMinutes;
     }
 
+    /**
+     * 获取一小时中分钟数的集合 0-59
+     *
+     * @return String
+     */
+    public static String[] getHourMinutes2() {
+        if (hourMinutes == null) {
+            ArrayList<String> integers = new ArrayList<>();
+            for (int i = 1; i <= 59; i++) {
+                if (i < 10) {
+                    integers.add("0" + String.valueOf(i));
+                } else {
+                    integers.add(String.valueOf(i));
+                }
+            }
+            hourMinutes = integers.toArray(new String[integers.size()]);
+        }
+        return hourMinutes;
+    }
+
     public static String parseTime(@IntRange(from = 0, to = 23) int hour, @IntRange(from = 0, to = 59) int minute) {
         if (hour < 0 || hour > 23) {
             hour = 0;
