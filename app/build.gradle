@@ -56,8 +56,8 @@ android {
             }
             p2 {
                 applicationId "bauway.com.electroniccigarettes2"
-                versionCode 25
-                versionName "2.5.1"
+                versionCode 26
+                versionName "2.6.1"
                 buildConfigField "int", "PROJECT_NO", "2"
             }
             p3 {

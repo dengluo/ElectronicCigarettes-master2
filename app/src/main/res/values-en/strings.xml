@@ -90,7 +90,7 @@
     <string name="pwd_input_diff">The two passwords you entered did not match.</string>
     <string name="register_failure">Registration failed</string>
     <string name="register_now">Registering</string>
-    <string name="register_success_plz_check_email">Registered successfully.please check your email.</string>
+    <string name="register_success_plz_check_email">Registered successfully.</string>
     <string name="reset_password">Reset password</string>
     <string name="rmb">RMB</string>
     <string name="youtube">Youtube</string>

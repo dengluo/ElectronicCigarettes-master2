@@ -25,7 +25,7 @@
     <string name="confirm">確認</string>
     <string name="email_already_register">このメールはもう登録されました</string>
     <string name="register_failure">新規作成失敗</string>
-    <string name="register_success_plz_check_email">新規作成成功、メールを確認してください</string>
+    <string name="register_success_plz_check_email">新規作成成功</string>
     <string name="register_now">新規作成中…</string>
     <string name="login_now">ログイン…</string>
     <string name="email_pwd_input_err">メールアドレスかパスワードが正しくありません</string>

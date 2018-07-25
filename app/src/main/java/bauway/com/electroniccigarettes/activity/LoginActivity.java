@@ -3,6 +3,7 @@ package bauway.com.electroniccigarettes.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -96,7 +97,7 @@ public class LoginActivity extends BaseActivity {
     }
 
     private void login() {
-        final String email = mEtLoginEmail.getText().toString().trim();
+        final String email = mEtLoginEmail.getText().toString();
         if (TextUtils.isEmpty(email)) {
             ToastUtils.showShort(R.string.plz_input_email);
             return;
@@ -104,34 +105,23 @@ public class LoginActivity extends BaseActivity {
         String pwd = mEtLoginPwd.getText().toString();
         if (TextUtils.isEmpty(pwd)) {
             ToastUtils.showShort(R.string.plz_input_pwd);
+            return;
         }
         DialogUtil.progressDialog(mContext, getString(R.string.login_now), false);
+        Log.e("login=",email + ":" + pwd);
 
         BmobUser.loginByAccount(email, pwd, new LogInListener<User>() {
             @Override
             public void done(User user, BmobException e) {
                 if (e == null) {
-                    if (user.getEmailVerified()) {
                         //存储用户账号信息
                         userRxPreferences.getString(MyConstants2.LOGIN_EMAIL).set(email);
                         PreferencesUtils.putEntity(mContext, user);
                         startActivity(new Intent(LoginActivity.this, MainNewActivity.class));
                         LoginActivity.this.finish();
-                    } else {
-                        //邮箱未验证，提醒用户验证，同时判断账号更新时间，如果超过10分钟，则再次发送验证邮件
-                        ToastUtils.showShort(R.string.email_need_check);
-                        long timeSpan = TimeUtils.getTimeSpan(System.currentTimeMillis(), DateUtils.getServiceDate(user.getUpdatedAt()), TimeConstants.MSEC);
-                        if (timeSpan > (1000 * 60 * 10)) {
-                            BmobUser.requestEmailVerify(user.getEmail(), new UpdateListener() {
-                                @Override
-                                public void done(BmobException e) {
-
-                                }
-                            });
-                        }
-                    }
                 } else {
-                    LogUtils.d(e.getErrorCode() + ":" + e.getMessage());
+                    Log.e("error=",e.getErrorCode() + ":" + e.getMessage());
+                    System.out.print(e.getErrorCode() + ":" + e.getMessage());
                     ToastUtils.showShort(R.string.email_pwd_input_err);
                 }
                 DialogUtil.hide();
