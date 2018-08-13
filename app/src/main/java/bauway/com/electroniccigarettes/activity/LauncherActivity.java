@@ -9,7 +9,6 @@ import android.view.WindowManager;
 
 import bauway.com.electroniccigarettes.R;
 import bauway.com.electroniccigarettes.base.BaseActivity;
-import bauway.com.electroniccigarettes.bean.User;
 
 /**
  * Created by Danny on 2017/8/10.
@@ -34,15 +33,7 @@ public class LauncherActivity extends BaseActivity {
     }
 
     private void startActivity() {
-        User user = getUserEntity();
-        if (user != null
-                && !TextUtils.isEmpty(user.getEmail())
-                && !TextUtils.isEmpty(user.getUsername())
-                ) {
-            startActivity(new Intent(this, MainNewActivity.class));
-        } else {
-            startActivity(new Intent(this, LoginActivity.class));
-        }
+        startActivity(new Intent(this, MainNewActivity.class));
         this.finish();
     }
 

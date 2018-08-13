@@ -232,7 +232,7 @@ public class MeActivity extends BaseActivity {
         super.onDestroy();
     }
 
-    @OnClick({R.id.action_back, R.id.ll_me_evaluate, R.id.ll_me_notes, R.id.ll_me_concern_us, R.id.ll_me_unbind_device, R.id.ll_me_ota, R.id.iv_cancel})
+    @OnClick({R.id.action_back, R.id.ll_me_evaluate, R.id.ll_me_notes, R.id.ll_me_concern_us, R.id.ll_me_unbind_device, R.id.ll_me_ota})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.action_back:
@@ -266,17 +266,7 @@ public class MeActivity extends BaseActivity {
                 }
                 mSmaManager.write(SmaManager.SET.INTO_OTA);
                 break;
-            case R.id.iv_cancel:
-                DialogUtil.defaultDialog(mContext, getString(R.string.confirm_log_out_app), null, null, new
-                        DialogCallback() {
 
-                            @Override
-                            public void execute(Object dialog, Object content) {
-                                //确认退出
-                                exitApp();
-                            }
-                        });
-                break;
         }
     }
 }
